@@ -24,3 +24,10 @@ Route::get('/registration', function () {
     return view('registration');
 });
 
+Route::get('/addCategory', function () {
+    return view('addCategory');
+});
+
+Route::get('/addQuestion', function () {
+    return view('addQuestion');
+});
