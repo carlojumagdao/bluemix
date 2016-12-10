@@ -1,5 +1,5 @@
 {
-  "PHP_70_LATEST": "7.0.4",
+  "PHP_70_LATEST": "5.5.38",
   "PHP_VERSION": "{PHP_70_LATEST}",
   "COMPOSER_VENDOR_DIR": "vendor",
   "COMPOSER_VERSION": "latest",
