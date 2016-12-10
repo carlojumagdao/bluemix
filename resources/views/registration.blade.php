@@ -2,6 +2,7 @@
   <html lang="en">
     <head>
       <!--Import jQuery before materialize.js-->
+      <meta name="csrf_token" content="{{ csrf_token() }}" />
       <script type="text/javascript" src="{!! URL::asset('../js/jquery-2.1.1.min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/materialize.min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/prism.js') !!}"></script>
@@ -9,6 +10,7 @@
       <script type="text/javascript" src="{!! URL::asset('../js/plugin-min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/perfect-scrollbar.min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/jquery.magnific-popup.min.js') !!}"></script>
+      <script type="text/javascript" src = "{!! URL::asset('../js/process/registration.js') !!}"></script>
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
@@ -51,16 +53,14 @@
                     <label for="lastname">Last Name</label>
                   </div>
                   <div class="col s12">
-                    <form action="#">
                         <p>
-                          <input name="group1" type="radio" id="test1" class = "with-gap"/>
+                          <input name="gender" type="radio" id="test1" class = "with-gap" value = 1 checked="checked" />
                           <label for="test1">Male</label>
                         </p>
                         <p>
-                          <input name="group1" type="radio" id="test2" class = "with-gap"/>
+                          <input name="gender" type="radio" id="test2" class = "with-gap" value = 0 />
                           <label for="test2">Female</label>
                         </p>
-                      </form>
                   </div>
                 </div>
 
@@ -99,7 +99,7 @@
 
               <div class="row">
                   <div class="input-field col s12">
-                    <a href="http://demo.geekslabs.com/materialize/v3.1/index.html" class="btn waves-effect waves-light col s12">Register Now</a>
+                    <a class="btn waves-effect waves-light col s12" id = 'btnRegister'>Register Now</a>
                   </div>
                   <div class="input-field col s12">
                     <p class="margin center medium-small sign-up">Already have an account? <a href="login.php">Login</a></p>
@@ -109,30 +109,21 @@
         </div>
     </div>
 
-    @section('scripts')
+    <script type="text/javascript">
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-      <script type="text/javascript" src = "{!! URL::asset('../js/process/registration.js') !!}"></script>
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
 
-
-      <script type="text/javascript">
-        function readURL(input) {
-          if (input.files && input.files[0]) {
-              var reader = new FileReader();
-
-              reader.onload = function (e) {
-                  $('#blah')
-                      .attr('src', e.target.result)
-                      .width(150)
-                      .height(200);
-              };
-
-              reader.readAsDataURL(input.files[0]);
-          }
+            reader.readAsDataURL(input.files[0]);
         }
-      </script>
-    @endsection
-      <!--Import jQuery before materialize.js-->
-
-      
+      }
+    </script>
     </body>
   </html>

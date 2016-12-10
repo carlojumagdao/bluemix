@@ -31,3 +31,6 @@ Route::get('/category', function () {
 Route::get('/question', function () {
     return view('addQuestion');
 });
+
+
+Route::post('/registration/create', 'UserController@create');
