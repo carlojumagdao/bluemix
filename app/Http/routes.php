@@ -15,4 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/maintenance', 'maintenanceController@index');
+
+Route::get('/adminMaintenance', function () {
+    return view('adminMaintenance');
+});
+
+Route::get('/registration', function () {
+    return view('registration');
+});
+
