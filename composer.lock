@@ -23,7 +23,7 @@
             },
             "require": {
                 "nikic/php-parser": "^1.0|^2.0|^3.0",
-                "php": ">=5.5.9"
+                "php": ">=5.1.9"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8|^5.0"
@@ -320,7 +320,7 @@
             },
             "require": {
                 "nikic/php-parser": "^1.2|^2.0|^3.0",
-                "php": ">=5.4",
+                "php": ">=5.1",
                 "symfony/polyfill-php56": "^1.0"
             },
             "require-dev": {
@@ -388,7 +388,7 @@
                 "mtdowling/cron-expression": "~1.0",
                 "nesbot/carbon": "~1.19",
                 "paragonie/random_compat": "~1.4",
-                "php": ">=5.5.9",
+                "php": ">=5.1.9",
                 "psy/psysh": "0.7.*",
                 "swiftmailer/swiftmailer": "~5.1",
                 "symfony/console": "2.7.*",
@@ -759,7 +759,7 @@
             },
             "require": {
                 "ext-tokenizer": "*",
-                "php": ">=5.4"
+                "php": ">=5.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.0"
@@ -2173,7 +2173,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5"
+                "php": ">=5.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.6"
@@ -2227,7 +2227,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5",
+                "php": ">=5.1",
                 "phpdocumentor/reflection-common": "^1.0@dev",
                 "phpdocumentor/type-resolver": "^0.2.0",
                 "webmozart/assert": "^1.0"
@@ -2272,7 +2272,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5",
+                "php": ">=5.1",
                 "phpdocumentor/reflection-common": "^1.0"
             },
             "require-dev": {
@@ -3237,7 +3237,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": ">=5.1.9"
             },
             "require-dev": {
                 "symfony/console": "~2.8|~3.0"
