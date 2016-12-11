@@ -67,11 +67,11 @@
           <ul class="right hide-on-med-and-down">
             <li><a href="sass.html"><i class="fa fa-dashboard left"></i>Dashboard</a>
             </li>
-            <li><a href="components.html"><i class="fa fa-plus left"></i>Add Event</a>
+            <li><a href=""><i class="fa fa-plus left"></i>Add Event</a>
             </li>
-            <li><a href="components.html"><i class="fa fa-plus left"></i>Add Category</a>
+            <li><a href="/category"><i class="fa fa-plus left"></i>Add Category</a>
             </li>
-            <li><a href="components.html"><i class="fa fa-plus left"></i>Add Question</a>
+            <li><a href="/question"><i class="fa fa-plus left"></i>Add Question</a>
             </li>
           </ul>
           </div>
