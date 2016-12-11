@@ -1,5 +1,6 @@
 <?php
-
+$services = json_decode(getenv(‘VCAP_SERVICES’), true);
+$sqlCreds = $services[‘cleardb’][0][‘credentials’];
 return [
 
     /*
@@ -66,9 +67,9 @@ return [
 
         'pgsql' => [
             'driver'   => 'pgsql',
-            'host'     => env('DB_HOST', '172.0.0.1'),
-            'database' => env('DB_DATABASE', 'dbPalad'),
-            'username' => env('DB_USERNAME', 'root'),
+            'host'     => env('DB_HOST', 'localhost'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
             'charset'  => 'utf8',
             'prefix'   => '',
