@@ -36,9 +36,14 @@ Route::get('/dashboard', function () {
     return view('adminDashboard');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+
 
 Route::post('/registration/create', 'UserController@create');
 Route::post('/category/create', 'CategoryController@create');
 Route::post('/question/create', 'QuestionController@create');
+Route::post('/login/check', 'LoginController@check');
 
 Route::get('/categories', 'CategoryController@index');

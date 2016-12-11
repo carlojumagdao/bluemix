@@ -10,7 +10,7 @@
       <script type="text/javascript" src="{!! URL::asset('../js/plugin-min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/perfect-scrollbar.min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/jquery.magnific-popup.min.js') !!}"></script>
-      <script type="text/javascript" src = "{!! URL::asset('../js/process/registration.js') !!}"></script>
+      <script type="text/javascript" src = "{!! URL::asset('../js/process/login.js') !!}"></script>
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
@@ -65,12 +65,12 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <a href="http://demo.geekslabs.com/materialize/v3.1/index.html" class="btn waves-effect waves-light col s12">Login</a>
+              <a id = 'btnLogin' class="btn waves-effect waves-light col s12">Login</a>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s6 m6 l6">
-              <p class="margin medium-small"><a href="register.php">Register Now!</a></p>
+              <p class="margin medium-small"><a href="/registration">Register Now!</a></p>
             </div>
             <div class="input-field col s6 m6 l6">
                 <p class="margin right-align medium-small"><a href="http://demo.geekslabs.com/materialize/v3.1/page-forgot-password.html">Forgot password ?</a></p>

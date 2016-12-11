@@ -144,12 +144,15 @@ DROP TABLE IF EXISTS `tblEvent`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tblEvent` (
   `intEventID` int(11) NOT NULL AUTO_INCREMENT,
-  `strEventDesc` varchar(200) NOT NULL,
+  `strEventShortDesc` varchar(200) NOT NULL,
+  `strEventLongDesc` varchar(200) DEFAULT NULL,
+  `strLocation` varchar(100) DEFAULT NULL,
   `dblFund` double NOT NULL,
   `dblConditionalFund` double NOT NULL,
   `dblAnswerValue` double NOT NULL,
   `strPIcturePath` varchar(300) DEFAULT NULL,
   `intCategoryID` int(11) NOT NULL,
+  `datExpiration` datetime DEFAULT NULL,
   `blDelete` tinyint(4) NOT NULL DEFAULT '0',
   `TIMESTAMP` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`intEventID`),
@@ -176,7 +179,7 @@ DROP TABLE IF EXISTS `tblQuestion`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tblQuestion` (
   `intQuestionID` int(11) NOT NULL AUTO_INCREMENT,
-  `strQuestionDesc` varchar(200) NOT NULL,
+  `strQuestionDesc` varchar(200) DEFAULT NULL,
   `strAnswer` varchar(200) NOT NULL,
   `strPicturePath` varchar(300) DEFAULT NULL,
   `intCategoryID` int(11) NOT NULL,
@@ -248,4 +251,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-11  2:15:54
+-- Dump completed on 2016-12-11 12:53:20
