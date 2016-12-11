@@ -10,7 +10,7 @@
 		<div class="col s6 m4 l3">
 			<form class="col s12">
 				<div class="row">
-					<h5>Event Information</h5>
+					<h5 class="center">Event Information</h5>
 					<div class="input-field col s12">
 					  	<input id="eventName" type="text" class="validate">
 					  	<label for="eventName">Event Name</label>
@@ -41,7 +41,7 @@
 				</div>
 			</form>
 
-			<h5>Donation Information</h5>
+			<h5 class="center">Donation Information</h5>
 			<form class="col s12" style="padding-top: 15px;">
 				<div class="row">
 
@@ -64,6 +64,9 @@
 					</div>					
 				</div>
 			</form>
+		  	<div class="col s12 center" style="padding-top: 10px;">
+		  		<a href="" class="btn"><i class="fa fa-plus left"></i>Add Question</a>
+		  	</div>
 		</div>
 		<div class="col s12 m8 l9">
 		    <table class="striped white" style="border-radius:10px;" id="dataTable">
