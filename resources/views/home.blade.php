@@ -83,9 +83,9 @@
 			                <span class="card-title">Samar, Leyte</span>
 		              	</div>
 		              	<div class="card-content">
-			                <h5>Yolanda Victim</h5>
-			                <p>Estimated 100 families had been affected by the massive storm and taken 5 lives along with 1 million worth of properties</p>
-			                <blockquote>For every person who play the game we will donate < value > to the victims</blockquote>
+			                <h5 id = 'strEventName'>Yolanda Victim</h5>
+			                <p id = 'strEventDescription'>Estimated 100 families had been affected by the massive storm and taken 5 lives along with 1 million worth of properties</p>
+			                <blockquote id = 'strNote'></blockquote>
 		              	</div>
 		              	<div class="card-content">
 		              		<label>Conditional Fund Progress</label>
@@ -208,6 +208,8 @@
 @endsection
 
 @section('scripts')
+	<script type="text/javascript" src = "{!! URL::asset('../js/process/homeEvent.js') !!}"></script>
+
     <script type="text/javascript">
       $(document).ready(function() {
       $('.dropdown-button').dropdown({
