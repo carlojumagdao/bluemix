@@ -3,5 +3,5 @@
      "COMPOSER_VENDOR_DIR": "htdocs/vendor",
      "COMPOSER_VERSION": "latest",
      "WEBDIR": "htdocs/public",
-     "PHP_EXTENSIONS": [ "bz2", "zlib", "openssl", "fpm", "tokenizer", "curl", "mcrypt", "mbstring", "pdo"]
+     "PHP_EXTENSIONS": [ "bz2", "zlib", "openssl", "fpm", "tokenizer", "curl", "mcrypt", "mbstring", "pdo", "pdo_mysql"]
 }
