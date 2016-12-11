@@ -26,6 +26,9 @@ Category
 	        <input class="file-path validate" type="text" placeholder="Upload Image">
 	      </div>
 	    </div>
+	  	<div class="col s12 center" style="padding-top: 10px;">
+	  		<a href="" class="btn"><i class="fa fa-plus left"></i>Add Category</a>
+	  	</div>
 	</div>
   	<div class="col s7 m8 l8" style="margin-top:">
 	    <table class="striped white" style="border-radius:10px;" id="dataTable">
@@ -45,12 +48,6 @@ Category
 	      </tbody>
 	    </table>
   	</div>
-</div>
-
-<div class="row">
-  <div class="input-field col s12">
-    <a class="btn waves-effect waves-light col s12" id = 'btnAdd'>Add</a>
-  </div>
 </div>
 
 @endsection
