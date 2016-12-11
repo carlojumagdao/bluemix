@@ -108,6 +108,8 @@
 		                	<div class="input-field col s8 margin">
 				              	<input id="profile-comments" type="text" class="validate margin">
 				            	<label for="profile-comments" class="">Comments</label>
+
+				            	<a class="btn white-text">Post Comment</a>
 		                	</div>                        
 		              	</div> 
 		            </div>
