@@ -14,6 +14,10 @@
 					  	<input id="eventName" type="text" class="validate">
 					  	<label for="eventName">Event Name</label>
 					</div>
+			        <div class="input-field col s12">
+			          <textarea id="textarea1" class="materialize-textarea"></textarea>
+			          <label for="textarea1">Event Description</label>
+			        </div>
 					<div class="input-field col s12">
 					  	<input id="locationProvince" type="text" class="validate">
 					  	<label for="locationProvince">Province</label>
@@ -26,7 +30,7 @@
 					  <input type="number" name="" placeholder="Enter Fund">						
 					</div>
 					<div class="col s12">
-					  <input type="number" name="" placeholder="Enter Initial Donation">						
+					  <input type="number" name="" placeholder="Enter Conditional Fund">						
 					</div>
 					<div class=" col s12">
 						<select class="browser-default">
@@ -37,8 +41,8 @@
 					  	</select>
 					</div>
 					<div class="col s12">
-						<input type="range" name="" id="test5" min="100" max="300">
-					</div>
+					  <input type="number" name="" placeholder="Number of target people">						
+					</div>					
 					<div class="col s12">
 					    <div class="file-field input-field">
 					      <div class="btn">

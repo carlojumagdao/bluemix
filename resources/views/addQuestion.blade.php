@@ -23,6 +23,10 @@
 		    <textarea id="textarea1" class="materialize-textarea"></textarea>
 		   	<label for="textarea1">Type Question</label>
 		</div>
+		<div class="input-field col s12">
+		  	<input id="answer" type="text" class="validate">
+		  	<label for="answer">Answer</label>
+		</div>
 	    <div class="file-field input-field col s12">
 	      <div class="btn">
 	        <span>File</span>
