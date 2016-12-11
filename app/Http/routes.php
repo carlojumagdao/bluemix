@@ -44,6 +44,10 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/game', function () {
+    return view('game');
+});
+
 Route::post('/registration/create', 'UserController@create');
 Route::post('/category/create', 'CategoryController@create');
 Route::post('/question/create', 'QuestionController@create');
