@@ -32,8 +32,14 @@
 					  	<label for="location">Location</label>
 					</div>
 					<div class="col s12">
-						<input type="text" name="datefilter" value="" />
+						<label>Date Expiration</label><br>
+						<label>From</label>
+						<input type="date" class="datepicker">
 					</div>			
+					<div class="col s12">
+						<label>To</label>
+						<input type="date" class="datepicker">
+					</div>
 					<div class="col s12">
 					    <div class="file-field input-field">
 					      <div class="btn">
@@ -119,24 +125,10 @@
   		});
     </script>
     <script type="text/javascript">
-		$(function() {
-
-		  $('input[name="datefilter"]').daterangepicker({
-		      autoUpdateInput: false,
-		      locale: {
-		          cancelLabel: 'Clear'
-		      }
-		  });
-
-		  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-		      $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-		  });
-
-		  $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
-		      $(this).val('');
-		  });
-
-		});
-    </script>
+    	$('.datepicker').pickadate({
+	    selectMonths: true, // Creates a dropdown to control month
+	    selectYears: 15 // Creates a dropdown of 15 years to control year
+	  });
+    </script>	
 
 @endsection

@@ -16,11 +16,13 @@
       <script type="text/javascript" src="{!! URL::asset('../js/perfect-scrollbar.min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/jquery.magnific-popup.min.js') !!}"></script>
       <script type="text/javascript" src = "{!! URL::asset('../js/process/registration.js') !!}"></script>
-      <script type="text/javascript" src = "{!! URL::asset('../js/daterangepicker.js') !!}"></script>
-      <script type="text/javascript" src = "{!! URL::asset('../js/moment.js') !!}"></script>
+      <script type="text/javascript" src ="{!! URL::asset('../js/daterangepicker.js') !!}"></script>
+      <script type="text/javascript" src ="{!! URL::asset('../js/moment.js') !!}"></script>
+      <script type="text/javascript" src ="{!! URL::asset('../js/jquery.min.js') !!}"></script>
 
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
       <!--Import materialize.css-->
       <link rel="stylesheet" type="text/css" href="{!! URL::asset('../css/materialize.min.css') !!}" media="screen,projection">
       <link rel="stylesheet" type="text/css" href="{!! URL::asset('../css/prism.css') !!}">
@@ -44,7 +46,7 @@
     <div class="col s12 m8 l9"> <!-- START FIRST NAV -->
       <!-- Dropdown Structure -->
       <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!"><i class="fa fa-gear left"></i>Settings</a></li>
+        <li style="width: 192px;"><a href="#!"><i class="fa fa-gear left"></i>Settings</a></li>
         <li class="divider"></li>
         <li><a href="#!"><i class="fa fa-sign-out left"></i>Logout</a></li>
       </ul>
