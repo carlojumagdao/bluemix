@@ -27,7 +27,7 @@ Category
 	      </div>
 	    </div>
 	  	<div class="col s12 center" style="padding-top: 10px;">
-	  		<a href="" class="btn"><i class="fa fa-plus left"></i>Add Category</a>
+	  		<a href="" class="btn" id = 'btnAdd'><i class="fa fa-plus left"></i>Add Category</a>
 	  	</div>
 	</div>
   	<div class="col s7 m8 l8" style="margin-top:">

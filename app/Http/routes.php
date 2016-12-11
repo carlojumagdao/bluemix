@@ -44,6 +44,10 @@ Route::get('/login', function () {
 Route::post('/registration/create', 'UserController@create');
 Route::post('/category/create', 'CategoryController@create');
 Route::post('/question/create', 'QuestionController@create');
+Route::post('/event/create', 'EventController@create');
 Route::post('/login/check', 'LoginController@check');
+
+
+
 
 Route::get('/categories', 'CategoryController@index');

@@ -18,9 +18,8 @@ $('document').ready(function(){
 				strPassword: strPassword
 			},
 			success: function(data){
-				console.log(data);
 				if (data){
-					confirm('Sucess login');	
+					window.location.href = '/registration';
 				}else{
 					confirm('Failed Login');
 				}

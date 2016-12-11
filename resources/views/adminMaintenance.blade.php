@@ -12,11 +12,8 @@
 				<div class="row">
 					<h5 class="center">Event Information</h5>
 					<div class=" col s12">
-						<select class="browser-default">
+						<select class="browser-default" id = 'selectCategory'>
 						    <option value="" disabled selected>Select Category</option>
-						    <option value="1">Option 1</option>
-						    <option value="2">Option 2</option>
-						    <option value="3">Option 3</option>
 					  	</select>
 					</div>
 					<div class="input-field col s12">
@@ -24,8 +21,8 @@
 					  	<label for="eventName">Event Name</label>
 					</div>
 			        <div class="input-field col s12">
-			          <textarea id="textarea1" class="materialize-textarea"></textarea>
-			          <label for="textarea1">Event Description</label>
+			          <textarea id="description" class="materialize-textarea"></textarea>
+			          <label for="description">Event Description</label>
 			        </div>
 					<div class="input-field col s12">
 					  	<input id="location" type="text" class="validate">
@@ -33,13 +30,8 @@
 					</div>
 					<div class="col s12">
 						<label>Date Expiration</label><br>
-						<label>From</label>
-						<input type="date" class="datepicker">
+						<input type="date" id = 'expiration'>
 					</div>			
-					<div class="col s12">
-						<label>To</label>
-						<input type="date" class="datepicker">
-					</div>
 					<div class="col s12">
 					    <div class="file-field input-field">
 					      <div class="btn">
@@ -59,18 +51,18 @@
 				<div class="row">
 
 					<div class="col s12">
-					  <input type="number" name="" placeholder="Enter Fund">						
+					  <input type="number" name="" placeholder="Enter Fund" id = 'fund'>						
 					</div>
 					<div class="col s12">
-					  <input type="number" name="" placeholder="Enter Conditional Fund">						
+					  <input type="number" name="" placeholder="Enter Conditional Fund" id = 'conditionalFund'>						
 					</div>
 					<div class="col s12">
-					  <input type="number" name="" placeholder="Number of target people">						
+					  <input type="number" name="" placeholder="Number of target people" id = 'countPerson'>						
 					</div>					
 				</div>
 			</form>
 		  	<div class="col s12 center" style="padding-top: 10px;">
-		  		<a href="" class="btn"><i class="fa fa-plus left"></i>Add Event</a>
+		  		<a id = "btnAdd" class="btn"><i class="fa fa-plus left"></i>Add Event</a>
 		  	</div>
 		</div>
 		<div class="col s12 m8 l9">
@@ -122,13 +114,15 @@
       });
     </script>
     <script type="text/javascript">
-    	$(document).ready(function() {
+    $(document).ready(function() {
     	$('.datepicker').pickadate({
 	    selectMonths: true, // Creates a dropdown to control month
 	    selectYears: 15 // Creates a dropdown of 15 years to control year
 		}
 	  );
 	  });
-    </script>	
+    </script>
+	<script type="text/javascript" src = "{!! URL::asset('../js/process/event.js') !!}"></script>
+	<script type="text/javascript" src = "{!! URL::asset('../js/process/selectCategory.js') !!}"></script>
 
 @endsection

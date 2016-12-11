@@ -78,4 +78,5 @@
     </script>
     
 	<script type="text/javascript" src = "{!! URL::asset('../js/process/question.js') !!}"></script>
+	<script type="text/javascript" src = "{!! URL::asset('../js/process/selectCategory.js') !!}"></script>
 @endsection
