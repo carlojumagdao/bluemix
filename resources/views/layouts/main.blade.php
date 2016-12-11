@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
     <head>
       <meta charset="utf-8">
@@ -16,9 +16,7 @@
       <script type="text/javascript" src="{!! URL::asset('../js/perfect-scrollbar.min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/jquery.magnific-popup.min.js') !!}"></script>
       <script type="text/javascript" src = "{!! URL::asset('../js/process/registration.js') !!}"></script>
-      <script type="text/javascript" src = "{!! URL::asset('../js/daterangepicker.js') !!}"></script>
-      <script type="text/javascript" src = "{!! URL::asset('../js/moment.js') !!}"></script>
-
+      
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
@@ -31,7 +29,7 @@
       <link rel="stylesheet" type="text/css" href="{!! URL::asset('../css/font-awesome.min.css') !!}">
       <link rel="stylesheet" type="text/css" href="{!! URL::asset('../css/hover-min.css') !!}">
       <link rel="stylesheet" type="text/css" href="{!! URL::asset('../css/jquery.dataTables.min.css') !!}">
-      <link rel="stylesheet" type="text/css" href="{!! URL::asset('../css/daterangepicker.css') !!}">
+
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -39,47 +37,39 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body>
-
-    <div class="col s12 m8 l9"> <!-- START FIRST NAV -->
+    <div class="col s12 m8 l12">
       <!-- Dropdown Structure -->
-      <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!"><i class="fa fa-gear left"></i>Settings</a></li>
-        <li class="divider"></li>
-        <li><a href="#!"><i class="fa fa-sign-out left"></i>Logout</a></li>
-      </ul>
       <nav class="teal">
         <div class="nav-wrapper">
           <div class="col s12">
-          <a href="#!" class="brand-logo">Logo</a>
+          <a href="index.php" class="brand-logo">Logo</a>
           <ul class="right hide-on-med-and-down">
+            <li><a href="http://demo.geekslabs.com/materialize/v3.1/sass.html">About</a></li>
             <!-- Dropdown Trigger -->
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="fa fa-user-circle-o left"></i>Administrator</a>
+            <li style="width: 150px;"><a class="dropdown-button" href="" data-activates="dropdownEvents">Events<i class="fa fa-angle-down left"></i></a>
+              <ul id="dropdownEvents" class="dropdown-content">
+                <li><a href="">Earthquake</a></li>
+                <li><a href="">Fire</a></li>
+                <li><a href="">Flood</a></li>
+                <li><a href="">Storm</a></li>
+              </ul>
             </li>
+            <li style="width: 170px;"><a class="dropdown-button" href="" data-activates="dropdownAwareness">Awareness<i class="fa fa-angle-down left"></i></a>
+              <ul id="dropdownAwareness" class="dropdown-content">
+                <li><a href="">Cancer</a></li>
+                <li><a href="">Diabitis</a></li>
+                <li><a href="">Malnutrition</a></li>
+                <li><a href="">STD & HIV</a></li>
+              </ul>
+            </li>
+            <li><a href="login.php">Login</a></li>
+            <a class="waves-effect waves-light btn" href="register.php">Signup</a>
           </ul>
           </div>
         </div>
       </nav>
-    </div> <!-- END FIRST NAV -->
+    </div>
 
-    <div class="col s12 m8 l9"> <!-- START SECOND NAV -->
-      <nav class="green">
-        <div class="nav-wrapper">
-          <div class="col s12">
-          <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html"><i class="fa fa-dashboard left"></i>Dashboard</a>
-            </li>
-            <li><a href="components.html"><i class="fa fa-plus left"></i>Add Event</a>
-            </li>
-            <li><a href="components.html"><i class="fa fa-plus left"></i>Add Category</a>
-            </li>
-            <li><a href="components.html"><i class="fa fa-plus left"></i>Add Question</a>
-            </li>
-          </ul>
-          </div>
-        </div>
-      </nav>
-    </div>  <!-- END SECOND NAV -->
 
     <div>
       @yield('body')

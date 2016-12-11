@@ -11,6 +11,14 @@
 			<form class="col s12">
 				<div class="row">
 					<h5 class="center">Event Information</h5>
+					<div class=" col s12">
+						<select class="browser-default">
+						    <option value="" disabled selected>Select Category</option>
+						    <option value="1">Option 1</option>
+						    <option value="2">Option 2</option>
+						    <option value="3">Option 3</option>
+					  	</select>
+					</div>
 					<div class="input-field col s12">
 					  	<input id="eventName" type="text" class="validate">
 					  	<label for="eventName">Event Name</label>
@@ -20,13 +28,12 @@
 			          <label for="textarea1">Event Description</label>
 			        </div>
 					<div class="input-field col s12">
-					  	<input id="locationProvince" type="text" class="validate">
-					  	<label for="locationProvince">Province</label>
+					  	<input id="location" type="text" class="validate">
+					  	<label for="location">Location</label>
 					</div>
-					<div class="input-field col s12">
-					  	<input id="locationCity" type="text" class="validate">
-					  	<label for="locationCity">City</label>
-					</div>					
+					<div class="col s12">
+						<input type="text" name="datefilter" value="" />
+					</div>			
 					<div class="col s12">
 					    <div class="file-field input-field">
 					      <div class="btn">
@@ -51,21 +58,13 @@
 					<div class="col s12">
 					  <input type="number" name="" placeholder="Enter Conditional Fund">						
 					</div>
-					<div class=" col s12">
-						<select class="browser-default">
-						    <option value="" disabled selected>Select Category</option>
-						    <option value="1">Option 1</option>
-						    <option value="2">Option 2</option>
-						    <option value="3">Option 3</option>
-					  	</select>
-					</div>
 					<div class="col s12">
 					  <input type="number" name="" placeholder="Number of target people">						
 					</div>					
 				</div>
 			</form>
 		  	<div class="col s12 center" style="padding-top: 10px;">
-		  		<a href="" class="btn"><i class="fa fa-plus left"></i>Add Question</a>
+		  		<a href="" class="btn"><i class="fa fa-plus left"></i>Add Event</a>
 		  	</div>
 		</div>
 		<div class="col s12 m8 l9">
@@ -118,6 +117,26 @@
       	$(document).ready(function() {
     	$('select').material_select();
   		});
+    </script>
+    <script type="text/javascript">
+		$(function() {
+
+		  $('input[name="datefilter"]').daterangepicker({
+		      autoUpdateInput: false,
+		      locale: {
+		          cancelLabel: 'Clear'
+		      }
+		  });
+
+		  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+		      $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+		  });
+
+		  $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+		      $(this).val('');
+		  });
+
+		});
     </script>
 
 @endsection

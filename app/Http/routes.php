@@ -32,6 +32,10 @@ Route::get('/question', function () {
     return view('addQuestion');
 });
 
+Route::get('/dashboard', function () {
+    return view('adminDashboard');
+});
+
 
 Route::post('/registration/create', 'UserController@create');
 Route::post('/category/create', 'CategoryController@create');
