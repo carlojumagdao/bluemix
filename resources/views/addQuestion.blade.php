@@ -61,7 +61,9 @@
 
 
 @section('scripts')
+
     <script type="text/javascript">
+      $(document).ready(function() {
       $('.dropdown-button').dropdown({
           inDuration: 300,
           outDuration: 225,
@@ -72,6 +74,7 @@
           alignment: 'left' // Displays dropdown with edge aligned to the left of button
         }
       );
+      });
     </script>
     
 	<script type="text/javascript" src = "{!! URL::asset('../js/process/question.js') !!}"></script>
