@@ -16,7 +16,13 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events = DB::table('tblEvent')
+            ->join('tblCategory', 'tblCategory.intCategoryID', '=', 'tblEvent.intCategoryID')
+            ->select('tblEvent.*', 'tblCategory.strCategoryName')
+            ->orderBy('tblEvent.TIMESTAMP', 'desc')
+            ->first();
+
+        return response()->json($events);
     }
 
     /**

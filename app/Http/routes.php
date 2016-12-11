@@ -40,6 +40,9 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
 
 Route::post('/registration/create', 'UserController@create');
 Route::post('/category/create', 'CategoryController@create');
@@ -51,3 +54,11 @@ Route::post('/login/check', 'LoginController@check');
 
 
 Route::get('/categories', 'CategoryController@index');
+Route::get('/events', 'EventController@index');
+
+
+
+
+
+
+

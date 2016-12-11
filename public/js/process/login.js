@@ -19,7 +19,7 @@ $('document').ready(function(){
 			},
 			success: function(data){
 				if (data){
-					window.location.href = '/registration';
+					window.location.href = '/home';
 				}else{
 					confirm('Failed Login');
 				}

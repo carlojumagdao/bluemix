@@ -35,6 +35,7 @@ class LoginController extends Controller
                 ->first();
 
             if(!is_null($result)){
+                $request->session()->put('userID', $result->intUserID);
                 return response()->json(True);
             }else{
                 return response()->json(False);
