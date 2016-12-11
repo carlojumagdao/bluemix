@@ -2,7 +2,7 @@
 applications:
 - name: palad-app
   memory: 128M
-  buildpack: https://github.com/cloudfoundry/cf-buildpack-php
+  buildpack: https://github.com/cloudfoundry/php-buildpack#v4.3.23
   env:
     CF_STAGING_TIMEOUT: 15
     CF_STARTUP_TIMEOUT: 15
