@@ -1,7 +1,7 @@
 @extends('layouts.maintenance')
 
 @section('title')
-	Add Category
+Category
 @endsection
 
 @section('body')
@@ -14,8 +14,8 @@
           	<label for="categoryName">Category Name</label>
         </div>
         <div class="input-field col s12">
-		    <textarea id="textarea1" class="materialize-textarea"></textarea>
-		   	<label for="textarea1">Category Description</label>
+		    <textarea id="categoryDescription" class="materialize-textarea"></textarea>
+		   	<label for="categoryDescription">Category Description</label>
 		</div>
 	    <div class="file-field input-field col s12">
 	      <div class="btn">
@@ -47,8 +47,14 @@
   	</div>
 </div>
 
+<div class="row">
+  <div class="input-field col s12">
+    <a class="btn waves-effect waves-light col s12" id = 'btnAdd'>Add</a>
+  </div>
+</div>
+
 @endsection
 
 @section('scripts')
-
+	<script type="text/javascript" src = "{!! URL::asset('../js/process/category.js') !!}"></script>
 @endsection
