@@ -10,18 +10,13 @@
 <div class="row">
 	<div class="col s5 m4 l4">
 		<div class="input-field col s12">
-		  <!-- Dropdown Trigger -->
-		  <a class='dropdown-button btn' href='#' data-activates='categoryDropdown'>Choose Category</a>
-
-		  <!-- Dropdown Structure -->
-		  <ul id='categoryDropdown' class='dropdown-content'>
-		    <li><a href="#!">one</a></li>
-		    <li><a href="#!">two</a></li>
-		  </ul>
+			<select id = 'selectCategory'>
+				<option disabled selected="selected">Choose Group</option>
+			</select>
         </div>
         <div class="input-field col s12">
-		    <textarea id="textarea1" class="materialize-textarea"></textarea>
-		   	<label for="textarea1">Type Question</label>
+		    <textarea id="question" class="materialize-textarea"></textarea>
+		   	<label for="question">Type Question</label>
 		</div>
 		<div class="input-field col s12">
 		  	<input id="answer" type="text" class="validate">
@@ -37,7 +32,7 @@
 	      </div>
 	    </div>
 	  	<div class="col s12 center" style="padding-top: 10px;">
-	  		<a href="" class="btn"><i class="fa fa-plus left"></i>Add Question</a>
+	  		<a id = 'btnAdd' class="btn"><i class="fa fa-plus left"></i>Add Question</a>
 	  	</div>
 	</div>
   	<div class="col s7 m8 l8" style="margin-top:">
@@ -62,4 +57,9 @@
   	</div>
 </div>
 
+@endsection
+
+
+@section('scripts')
+	<script type="text/javascript" src = "{!! URL::asset('../js/process/question.js') !!}"></script>
 @endsection

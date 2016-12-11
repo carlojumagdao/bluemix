@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
-class CategoryController extends Controller
+class QuestionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = DB::table('tblCategory')
-            ->select('*')
-            ->get();
-        return response()->json($categories);
+        //
     }
 
     /**
@@ -29,19 +26,21 @@ class CategoryController extends Controller
      */
     public function create(Request $request)
     {
-        try{
+
+        try {
             DB::beginTransaction();
 
-            DB::table('tblCategory')->insert([
-                'strCategoryName' => $request->strCategoryName,
-                'strCategoryDesc' => $request->strCategoryDesc
+            DB::table('tblQuestion')->insert([
+                'strQuestionDesc' => $request->strQuestionDesc,
+                'strAnswer' => $request->strAnswer,
+                'intCategoryID' => $request->intCategoryID
             ]);
-
-
+            
             DB::commit();
-        }catch(Exception $e){
+        } catch (Exception $e) {
             DB::rollback();
         }
+               
     }
 
     /**
