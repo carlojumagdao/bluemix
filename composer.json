@@ -5,7 +5,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.1.9",
+        "php": ">=5.5.9",
         "laravel/framework": "5.1.*"
     },
     "require-dev": {
@@ -28,16 +28,18 @@
         ]
     },
     "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ],
         "post-create-project-cmd": [
-            "php -r \"copy('.env.example', '.env');\"",
             "php htdocs/artisan key:generate"
         ],
         "post-install-cmd": [
-            "php htdocs/artisan clear-compiled",
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
             "php htdocs/artisan optimize"
         ],
-        "post-update-cmd": [    
-            "php htdocs/artisan clear-compiled",
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php htdocs/artisan optimize"
         ]
     },
