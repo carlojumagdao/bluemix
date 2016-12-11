@@ -36,10 +36,12 @@
         ],
         "post-install-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php htdocs/artisan clear-compiled",
             "php htdocs/artisan optimize"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php htdocs/artisan clear-compiled",
             "php htdocs/artisan optimize"
         ]
     },
