@@ -18,7 +18,6 @@
       <script type="text/javascript" src = "{!! URL::asset('../js/process/registration.js') !!}"></script>
       <script type="text/javascript" src ="{!! URL::asset('../js/daterangepicker.js') !!}"></script>
       <script type="text/javascript" src ="{!! URL::asset('../js/moment.js') !!}"></script>
-      <script type="text/javascript" src ="{!! URL::asset('../js/jquery.min.js') !!}"></script>
 
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

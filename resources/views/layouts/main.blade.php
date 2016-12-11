@@ -37,6 +37,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
+    <div>
+      @yield('userNav')
+    </div>
+
     <div class="col s12 m8 l12">
       <!-- Dropdown Structure -->
       <nav class="teal">
@@ -48,19 +52,12 @@
             <!-- Dropdown Trigger -->
             <li style="width: 150px;"><a class="dropdown-button" href="" data-activates="dropdownEvents">Events<i class="fa fa-angle-down left"></i></a>
               <ul id="dropdownEvents" class="dropdown-content">
-                <li><a href="">Earthquake</a></li>
+                <li style="width: 150px;"><a href="">Earthquake</a></li>
                 <li><a href="">Fire</a></li>
                 <li><a href="">Flood</a></li>
                 <li><a href="">Storm</a></li>
               </ul>
             </li>
-            <li style="width: 170px;"><a class="dropdown-button" href="" data-activates="dropdownAwareness">Awareness<i class="fa fa-angle-down left"></i></a>
-              <ul id="dropdownAwareness" class="dropdown-content">
-                <li><a href="">Cancer</a></li>
-                <li><a href="">Diabitis</a></li>
-                <li><a href="">Malnutrition</a></li>
-                <li><a href="">STD & HIV</a></li>
-              </ul>
             </li>
             <li><a href="login.php">Login</a></li>
             <a class="waves-effect waves-light btn" href="register.php">Signup</a>
