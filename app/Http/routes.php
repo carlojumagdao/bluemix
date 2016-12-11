@@ -52,11 +52,12 @@ Route::post('/registration/create', 'UserController@create');
 Route::post('/category/create', 'CategoryController@create');
 Route::post('/question/create', 'QuestionController@create');
 Route::post('/event/create', 'EventController@create');
+Route::post('/comment/create', 'CommentController@create');
 Route::post('/login/check', 'LoginController@check');
 
 
-
-
+Route::get('/logout', 'LoginController@logout');
+Route::get('/comments', 'CommentController@index');
 Route::get('/categories', 'CategoryController@index');
 Route::get('/events', 'EventController@index');
 

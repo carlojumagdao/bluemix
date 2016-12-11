@@ -59,8 +59,7 @@
               </ul>
             </li>
             </li>
-            <li><a href="login.php">Login</a></li>
-            <a class="waves-effect waves-light btn" href="register.php">Signup</a>
+            <li><a id = 'btnLogout'>Logout</a></li>
           </ul>
           </div>
         </div>
@@ -73,6 +72,6 @@
     </div>
 
     @yield('scripts')
-
+    <script type="text/javascript" src = "{!! URL::asset('../js/process/main.js') !!}"></script>
     </body>
   </html>

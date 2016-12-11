@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
-
-class LoginController extends Controller
+use Input;
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,15 @@ class LoginController extends Controller
      */
     public function index()
     {
-        //
+        $eventID = Input::get('eventID');
+        $comments = DB::table('tblComment')
+            ->join('tblUser', 'tblUser.intUserID', '=', 'tblComment.intUserID')
+            ->select('tblComment.strComment', 'tblUser.strFirstname', 'tblUser.strLastname', 'tblUser.strUsername')
+            ->where('tblcomment.intEventID', $eventID)
+            ->orderBy('tblComment.TIMESTAMP', 'desc')
+            ->get();
+
+        return response()->json($comments);
     }
 
     /**
@@ -25,28 +33,20 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function logout(Request $request){
-        $request->session()->flush();
-    }
-
-    public function check(Request $request)
+    public function create(Request $request)
     {
         try {
-            $result = DB::table('tblUser')
-                ->select('intUserID')
-                ->where('strUsername', $request->strUsername)
-                ->where('strPassword', $request->strPassword)
-                ->first();
+            DB::beginTransaction();
 
-            if(!is_null($result)){
-                $request->session()->put('userID', $result->intUserID);
-                return response()->json(True);
-            }else{
-                return response()->json(False);
-            }
+            DB::table('tblComment')->insert([
+                'intUserID' => $request->session()->get('userID'),
+                'intEventID' => $request->intEventID,
+                'strComment' => $request->strComment
+            ]);
+
+            DB::commit();
         } catch (Exception $e) {
-            
+            DB::rollback();
         }
     }
 

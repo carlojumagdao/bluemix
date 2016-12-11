@@ -106,66 +106,17 @@
 		                	</div>
 		                
 		                	<div class="input-field col s8 margin">
-				              	<input id="profile-comments" type="text" class="validate margin">
-				            	<label for="profile-comments" class="">Comments</label>
+				              	<input id="strComment" type="text" class="validate margin">
+				            	<label for="strComment" class="">Comments</label>
 
-				            	<a class="btn white-text">Post Comment</a>
+				            	<a id = 'btnComment' class="btn white-text">Post Comment</a>
 		                	</div>                        
 		              	</div> 
 		            </div>
 		        </div>
 
-	          	<div class="col s12 ScrollStyle" style="max-height: 300px; overflow-y: scroll;">
+	          	<div id = 'commentSection' class="col s12 ScrollStyle" style="max-height: 300px; overflow-y: scroll;">
 	            	<ul class="collection">
-			            <li class="collection-item avatar">
-			                <img src="img/avatar/avatar1.png" alt="" class="circle">
-			                <span>@Rafael Desuyo Jr.</span>
-			                <p>3<i class="fa fa-heart fa-fw red-text"></i><br>
-			                Wow! Nice
-			                </p>
-			                <a href="#!" class="secondary-content"><i class="fa fa-heart fa-fw red-text"></i></a>
-			            </li>
-		              	<li class="collection-item avatar">
-			                <img src="img/avatar/avatar2.png" alt="" class="circle">
-			                <span>@Joseph Javier</span>
-			                <p>5<i class="fa fa-heart fa-fw red-text"></i><br>
-			                Brilliant Count me in
-			                </p>
-			                <a href="#!" class="secondary-content"><i class="fa fa-heart fa-fw red-text"></i></a>
-		              	</li>
-	              		<li class="collection-item avatar">
-			                <img src="img/avatar/avatar3.png" alt="" class="circle">
-			                <span>@Carlo Jumagdao</span>
-			                <p>10<i class="fa fa-heart fa-fw red-text"></i><br>
-			                What a huge help! 
-			                </p>
-			                <a href="#!" class="secondary-content"><i class="fa fa-heart fa-fw red-text"></i></a>
-	              		</li>
-	              		<li class="collection-item avatar">
-			                <img src="img/avatar/avatar4.png" alt="" class="circle">
-			                <span>@Alex Uy</span>
-			                <p>9<i class="fa fa-heart fa-fw red-text"></i><br>
-			                Yey! I've passed the test 
-			                </p>
-			                <a href="#!" class="secondary-content"><i class="fa fa-heart fa-fw red-text"></i></a>
-	              		</li>
-	              		<li class="collection-item avatar">
-			                <img src="img/avatar/avatar2.png" alt="" class="circle">
-			                <span>@Liza Soberano</span>
-			                <p>9<i class="fa fa-heart fa-fw red-text"></i><br>
-			                I wanna help too
-			                </p>
-			                <a href="#!" class="secondary-content"><i class="fa fa-heart fa-fw red-text"></i></a>
-	              		</li>
-	            	</ul>
-	           	 	<ul class="pagination center">
-			              <li class="disabled"><a href="#!"><i class="fa fa-angle-left"></i></a></li>
-			              <li class="active"><a href="#!">1</a></li>
-			              <li class="waves-effect"><a href="#!">2</a></li>
-			              <li class="waves-effect"><a href="#!">3</a></li>
-			              <li class="waves-effect"><a href="#!">4</a></li>
-			              <li class="waves-effect"><a href="#!">5</a></li>
-			              <li class="waves-effect"><a href="#!"><i class="fa fa-angle-right"></i></a></li>
 	            	</ul>
 	          	</div>
         	</div>
@@ -211,6 +162,7 @@
 
 @section('scripts')
 	<script type="text/javascript" src = "{!! URL::asset('../js/process/homeEvent.js') !!}"></script>
+	<script type="text/javascript" src = "{!! URL::asset('../js/process/homeUser.js') !!}"></script>
 
     <script type="text/javascript">
       $(document).ready(function() {
