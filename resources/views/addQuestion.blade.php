@@ -36,6 +36,9 @@
 	        <input class="file-path validate" type="text" placeholder="Upload Image">
 	      </div>
 	    </div>
+	  	<div class="col s12 center" style="padding-top: 10px;">
+	  		<a href="" class="btn"><i class="fa fa-plus left"></i>Add Question</a>
+	  	</div>
 	</div>
   	<div class="col s7 m8 l8" style="margin-top:">
 	    <table class="striped white" style="border-radius:10px;" id="dataTable">
