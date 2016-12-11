@@ -40,6 +40,7 @@
 	        	<th>Picture</th>
 	        	<th>Category Name</th>
 	        	<th>Question</th>
+	        	<th>Answer</th>
 	        </tr>
 	      </thead>
 	      <tbody>
@@ -47,6 +48,7 @@
 	          <td><img src="{!! URL::asset('img/survival.jpg') !!}" style="height: 50px;"></td>
 	          <td>Survival Kit</td>
 	          <td>What are you?</td>
+	          <td>Human</td>
 	        </tr>
 	      </tbody>
 	    </table>

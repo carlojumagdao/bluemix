@@ -14,13 +14,13 @@
 					  	<input id="eventName" type="text" class="validate">
 					  	<label for="eventName">Event Name</label>
 					</div>
-					<div class=" col s12">
-						<select class="browser-default">
-						    <option value="" disabled selected>Select Location</option>
-						    <option value="1">Option 1</option>
-						    <option value="2">Option 2</option>
-						    <option value="3">Option 3</option>
-					  	</select>
+					<div class="input-field col s12">
+					  	<input id="locationProvince" type="text" class="validate">
+					  	<label for="locationProvince">Province</label>
+					</div>
+					<div class="input-field col s12">
+					  	<input id="locationCity" type="text" class="validate">
+					  	<label for="locationCity">City</label>
 					</div>
 					<div class="col s12">
 					  <input type="number" name="" placeholder="Enter Fund">						
