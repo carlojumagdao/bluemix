@@ -23,7 +23,7 @@ $('document').ready(function(){
 
 	$('#btnEnter').click(function(){
 		var strAnswer = $('#strAnswer').val();
-		if (questions[intCounter].strAnswer == strAnswer){
+		if (questions[intCounter].strAnswer.toLowerCase() == strAnswer.toLowerCase()){
 			$('#strAnswerStatus').text('Correct!');
 			intScore ++;
 		}else{
