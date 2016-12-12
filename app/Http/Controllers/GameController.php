@@ -8,24 +8,31 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
 use Input;
-class CommentController extends Controller
+
+class GameController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $eventID = Input::get('eventID');
-        $comments = DB::table('tblComment')
-            ->join('tblUser', 'tblUser.intUserID', '=', 'tblComment.intUserID')
-            ->select('tblComment.strComment', 'tblUser.strFirstname', 'tblUser.strLastname', 'tblUser.strUsername', 'tblComment.TIMESTAMP')
-            ->where('tblcomment.intEventID', $eventID)
-            ->orderBy('tblComment.TIMESTAMP', 'desc')
+        $eventID = $request->session()->get('eventID');
+
+        $questions = DB::table('tblEvent')
+            ->join('tblQuestion', 'tblQuestion.intCategoryID', '=', 'tblEvent.intCategoryID')
+            ->select('tblQuestion.*')
+            ->where('tblEvent.intEventID', $eventID)
             ->get();
 
-        return response()->json($comments);
+        // $request->session()->forget('eventID');
+
+        return response()->json($questions);
+    }
+
+    public function setEventID(Request $request){
+        $request->session()->put('eventID', Input::get('eventID'));
     }
 
     /**
@@ -33,21 +40,9 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        try {
-            DB::beginTransaction();
-
-            DB::table('tblComment')->insert([
-                'intUserID' => $request->session()->get('userID'),
-                'intEventID' => $request->intEventID,
-                'strComment' => $request->strComment
-            ]);
-
-            DB::commit();
-        } catch (Exception $e) {
-            DB::rollback();
-        }
+        //
     }
 
     /**

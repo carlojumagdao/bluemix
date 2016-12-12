@@ -11,6 +11,7 @@
       <script type="text/javascript" src="{!! URL::asset('../js/jquery-2.1.1.min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/materialize.min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/prism.js') !!}"></script>
+      <script type="text/javascript" src="{!! URL::asset('../js/moment.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/custom-min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/plugin-min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/perfect-scrollbar.min.js') !!}"></script>

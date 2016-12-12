@@ -10,7 +10,7 @@
       <script type="text/javascript" src="{!! URL::asset('../js/plugin-min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/perfect-scrollbar.min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/jquery.magnific-popup.min.js') !!}"></script>
-      <script type="text/javascript" src = "{!! URL::asset('../js/process/registration.js') !!}"></script>
+      <script type="text/javascript" src = "{!! URL::asset('../js/process/game.js') !!}"></script>
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
@@ -38,15 +38,15 @@
             <img src="{!! URL::asset('../img/10.jpg') !!}">
           </div>
           <div class="card-content">
-            <label>Category : Typhoon</label>
-            <p>This is a type of disaster.</p>
+            <p id = 'strQuestion' >test12345 question</p>
           </div>
           <div class="card-action">
-            <input type="text" name="" placeholder="Enter Your Answer">
+            <input id = 'strAnswer' type="text" placeholder="Enter Your Answer">
+            <p id = 'strAnswerStatus'></p>
           </div>
           <div class="card-action">
-            <a href="#" class="left" style="padding-bottom: 7px; padding-left: 10px;"><i class="fa fa-angle-left fa-3x prefix left"></i></a>
-            <a href="" class="right" style="padding-bottom: 7px;"><i class="fa fa-angle-right fa-3x prefix right"></i></a>
+            <button id = 'btnEnter' class = "btn">Enter</button>
+            <button id = 'btnNext' class = "btn">Next</button>
           </div>
         </div>
       </div>

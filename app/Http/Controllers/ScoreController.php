@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
-use Input;
-class CommentController extends Controller
+
+class ScoreController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,15 +17,7 @@ class CommentController extends Controller
      */
     public function index()
     {
-        $eventID = Input::get('eventID');
-        $comments = DB::table('tblComment')
-            ->join('tblUser', 'tblUser.intUserID', '=', 'tblComment.intUserID')
-            ->select('tblComment.strComment', 'tblUser.strFirstname', 'tblUser.strLastname', 'tblUser.strUsername', 'tblComment.TIMESTAMP')
-            ->where('tblcomment.intEventID', $eventID)
-            ->orderBy('tblComment.TIMESTAMP', 'desc')
-            ->get();
-
-        return response()->json($comments);
+        //
     }
 
     /**
@@ -35,14 +27,36 @@ class CommentController extends Controller
      */
     public function create(Request $request)
     {
+        $userID = $request->session()->get('userID');
+        $eventID = $request->session()->get('eventID');
+        $intScore = $request->intScore;
+
         try {
             DB::beginTransaction();
 
-            DB::table('tblComment')->insert([
-                'intUserID' => $request->session()->get('userID'),
-                'intEventID' => $request->intEventID,
-                'strComment' => $request->strComment
+            DB::table('tblAnswerHeader')->insert([
+                'intUserID' => $userID,
+                'intEventID' => $eventID,
+                'intScore' => $intScore
             ]);
+
+            $countPeople = DB::table('tblAnswerHeader')
+                ->where('intEventID', $eventID)
+                ->count();
+
+            $eventInfo = DB::table('tblEvent')
+                ->select('dblAnswerValue', 'dblConditionalFund')
+                ->where('intEventID', $eventID)
+                ->first();
+            $peopleNeeded = $eventInfo->dblConditionalFund / $eventInfo->dblAnswerValue;
+
+            if ($countPeople == $peopleNeeded){
+                DB::table('tblEvent')
+                    ->where('intEventID', $eventID)
+                    ->update([
+                        'blDelete' => 1
+                    ]);
+            }
 
             DB::commit();
         } catch (Exception $e) {

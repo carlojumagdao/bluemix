@@ -97,7 +97,7 @@
 								</div>
 		              	</div>
 		              	<div class="card-action">
-		                	<a href="#" class="btn white-text"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
+		                	<a id = 'btnPlay' class="btn white-text"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
 		              	</div>
 		              	<div class="card-action row">
 		                	<div class="col s4 card-action-share">
@@ -162,7 +162,6 @@
 
 @section('scripts')
 	<script type="text/javascript" src = "{!! URL::asset('../js/process/homeEvent.js') !!}"></script>
-	<script type="text/javascript" src = "{!! URL::asset('../js/process/homeUser.js') !!}"></script>
 
     <script type="text/javascript">
       $(document).ready(function() {

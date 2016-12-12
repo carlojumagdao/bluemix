@@ -1,6 +1,41 @@
 $('document').ready(function(){
 	var eventID;
 
+	$('#btnPlay').click(function(){
+		$.ajax({
+			type: "GET",
+			url: "/seteventid?eventID=" + eventID,
+			success: function(data){
+				window.location.href = '/game';
+			},
+			error: function(data){
+				var toastContent = $('<span>Error Occured. </span>');
+				Materialize.toast(toastContent, 1500,'red', 'edit');
+			}
+		});//ajax
+	});
+
+	$('#btnPlay').click(function(){
+		$.ajax({
+			type: "GET",
+			url: "/comments?eventID=" + eventID,
+			success: function(data){
+				$('#commentSection ul').empty();
+				$.each(data, function(index, value){
+					$("#commentSection ul").append('<li class="collection-item avatar">' + 
+		                '<img src="img/avatar/avatar1.png" alt="" class="circle">' + 
+		                '<span>@' + value.strUsername +'</span>' + 
+		                '<p>' + value.strComment + '</p>' + 
+		            	'</li>');
+				});
+			},
+			error: function(data){
+				var toastContent = $('<span>Error Occured. </span>');
+				Materialize.toast(toastContent, 1500,'red', 'edit');
+			}
+		});//ajax
+	});
+
 	$('#btnComment').click(function(){
 		var strComment = $('#strComment').val();
 		var intEventID = this.value;
@@ -40,6 +75,7 @@ $('document').ready(function(){
 				                '<img src="img/avatar/avatar1.png" alt="" class="circle">' + 
 				                '<span>@' + value.strUsername +'</span>' + 
 				                '<p>' + value.strComment + '</p>' + 
+				                '<p>' + moment(value.TIMESTAMP).calendar() + '</p>' + 
 				            '</li>');
 				});
 			},
