@@ -79,12 +79,12 @@
 	          	<div class="col s12">
 		            <div class="card">
 		              	<div class="card-image">
-			                <img src="img/event/Axe.jpg">
-			                <span class="card-title">Samar, Leyte</span>
+			                <img src="img/tacloban-survivors.jpg">
+			                <span class="card-title" id = 'strEventName'></span>
 		              	</div>
 		              	<div class="card-content">
-			                <h5 id = 'strEventName'>Yolanda Victim</h5>
-			                <p id = 'strEventDescription'>Estimated 100 families had been affected by the massive storm and taken 5 lives along with 1 million worth of properties</p>
+			                <h5 ></h5>
+			                <p id = 'strEventDescription'></p>
 			                <blockquote id = 'strNote'></blockquote>
 		              	</div>
 		              	<div class="card-content">
