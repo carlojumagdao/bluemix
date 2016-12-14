@@ -28,7 +28,7 @@ return [
     | you may use many connections at once using the Database library.
     |
     */
-
+    
     'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
@@ -57,10 +57,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host' => $sqlCreds['hostname'],
-            'database' => $sqlCreds['name'],
-            'username' => $sqlCreds['username'],
-            'password' => $sqlCreds['password'],
+            'host'      => $sqlCreds['hostname'],
+            'database'  => $sqlCreds['name'],
+            'username'  => $sqlCreds['username'],
+            'password'  => $sqlCreds['password'],
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
