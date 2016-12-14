@@ -23,6 +23,7 @@
       <link rel="stylesheet" type="text/css" href="{!! URL::asset('../css/font-awesome.min.css') !!}">
       <link rel="stylesheet" type="text/css" href="{!! URL::asset('../css/hover-min.css') !!}">
       <link rel="stylesheet" type="text/css" href="{!! URL::asset('../css/jquery.dataTables.min.css') !!}">
+      <link rel="stylesheet" type="text/css" href="{!! URL::asset('../css/media-hover-effects.css') !!}">
 
 
       <!--Let browser know website is optimized for mobile-->
@@ -31,6 +32,19 @@
 
     <body>
       
+<!-- PROPOSED DESIGN
+    <div class="col s12 m6 grid">
+      <figure class="effect-marley">
+        <img src="img/10.jpg" alt="img12">
+        <figcaption>
+          <h2>Sweet <span>Marley</span></h2>
+          <p>Marley tried to convince her but she was not interested.</p>
+          <a href="http://demo.geekslabs.com/materialize/v3.1/media-hover-effects.html#">View more</a>
+        </figcaption>     
+      </figure>
+    </div>
+      PROPOSED DESIGN -->
+
     <div class="row center">
       <div class="col s12 m8 l4 push-l4">
         <div class="card">

@@ -6,76 +6,26 @@
 
 
 @section('body')
-  	<div class="slider">
-	    <ul class="slides" style="height: 200px;">
-	      <li>
-	        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
-	        <div class="caption center-align">
-	          <h3>PaLaD</h3>
-	          <h5 class="light grey-text text-lighten-3">Faith in Humanity restored</h5>
-	        </div>
-	      </li>
-	      <li>
-	        <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
-	        <div class="caption left-align">
-	          <h3>PLAY</h3>
-	          <h5 class="light grey-text text-lighten-3">play games to donate</h5>
-	        </div>
-	      </li>
-	      <li>
-	        <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
-	        <div class="caption right-align">
-	          <h3>Learn</h3>
-	          <h5 class="light grey-text text-lighten-3">learn and be aware to disaster awaredness</h5>
-	        </div>
-	      </li>
-	      <li>
-	        <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
-	        <div class="caption center-align">
-	          <h3>Donate</h3>
-	          <h5 class="light grey-text text-lighten-3">donate and help others even you dont have any money</h5>
-	        </div>
-	      </li>
-	    </ul>
-  	</div>
 
+	
 
     <div class="row">
-    	<div class="col s12 m8 l2">
-    			<div class="col s12">
-					<div class="card">
-					    <div class="card-image">
-					      <img class="activator" src="{!! URL::asset('img/donor/pup.png') !!}" style="height: 170px;">
-					    </div>
-					    <div class="card-content">
-					      <span class="card-title activator grey-text text-darken-4">PUP<i class="material-icons right">more_vert</i></span>
-					      <p><a href="#">This is a link</a></p>
-					    </div>
-					    <div class="card-reveal">
-					      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-					      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-					    </div>
-					</div>
+    	<div class="col s12 m8 l3">
+    		<div class="card">
+    			<div class="card-image">
+    				<img src="{!! URL::asset('img/avatar/avatar1.png') !!}" class="circle center">
     			</div>
-    			<div class="col s12">
-					<div class="card">
-					    <div class="card-image">
-					      <img class="activator" src="{!! URL::asset('img/donor/dost.png') !!}" style="height: 170px;">
-					    </div>
-					    <div class="card-content">
-					      <span class="card-title activator grey-text text-darken-4">DOST<i class="material-icons right">more_vert</i></span>
-					      <p><a href="#">This is a link</a></p>
-					    </div>
-					    <div class="card-reveal">
-					      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-					      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-					    </div>
-					</div>
-    			</div>
+    		</div>
+    		<ul class="collection">
+    			<li class="collection-item green white-text">Rafael Desuyo Jr.<i class="fa fa-user-o prefix left"></i></li>
+    			<li class="collection-item">rafaelofgreece@gmail.com<i class="fa fa-envelope prefix left"></i></li>    			
+    			<li class="collection-item red lighten-1 white-text">60,000 Donations<i class="fa fa-money prefix left"></i></li>
+    		</ul>
     	</div>
 
-      	<div class="col s12 m8 l6">
+      	<div class="col s12 m8 l5">
 	        <div class="row">
+    		<h5 class="center">Recent Event</h5>
 	          	<div class="col s12">
 		            <div class="card">
 		              	<div class="card-image">
@@ -122,47 +72,97 @@
         	</div>
       	</div>
 
-      	<div class="col s12 m8 l2">
-      		<div class="row">
-		        <div class="col s12">
-		          <div class="card blue darken-2">
-		            <div class="card-image" style="background: white;">
-		              <img src="{!! URL::asset('img/aware/stopcancer.jpg') !!}" style="height: 140px;">
+      	<div class="col s12 m6 l4">
+	        <div class="row ScrollStyle" style="max-height: 500px; overflow-y: scroll;">
+	        	<h5 class="center">Suggested Events</h5>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+		              	<div class="card-image">
+		                	<img src="img/event/sf.jpg" style="height: 170px;">
+		              	</div>
+		              	<div class="card-stacked">
+			                <div class="card-content">
+			                  	<p>I am a very simple card. I am good at containing small bits of information.</p>
+			                </div>
+			                <div class="card-action">
+			                 	<a href="#">View more</a>
+			                </div>
+		              	</div>
 		            </div>
-		            <div class="card-content hvr-underline-reveal">
-		              <p class="white-text">We provide food, clothes, pillow and other necessary things needed by Flood victims</p>
+	          	</div>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+		              	<div class="card-image">
+		                	<img src="img/event/jugg.jpg" style="height: 170px;">
+		              	</div>
+		              	<div class="card-stacked">
+			                <div class="card-content">
+			                  	<p>I am a very simple card. I am good at containing small bits of information.</p>
+			                </div>
+			                <div class="card-action">
+			                  	<a href="#">View more</a>
+			                </div>
+		              	</div>
 		            </div>
-		            <div class="card-action">
-		              <a href="#" class="white-text">Learn More<i class="fa fa-arrow-circle-right left"></i></a>
+	          	</div>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+			            <div class="card-image">
+			            	<img src="img/event/sf.jpg" style="height: 170px;">
+			            </div>
+		              	<div class="card-stacked">
+		                	<div class="card-content">
+		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                	</div>
+		                	<div class="card-action">
+		                  		<a href="#">View more</a>
+		                	</div>
+		              	</div>
 		            </div>
-		          </div>
-		        </div>
-      		</div>
-      	</div>
-      	<div class="col s12 m8 l2">
-      		<div class="row">
-		        <div class="col s12">
-		          <div class="card blue darken-2">
-		            <div class="card-image">
-		              <img src="{!! URL::asset('img/aware/stopaids.png') !!}" style="height: 140px;">
+	          	</div>
+	        </div>
+	        <!-- HOTLINES -->
+	        <div class="row red lighten-1 ScrollStyle" style="max-height: 500px; overflow-y: scroll;">
+	    	<h5 class="center white-text">Hotlines</h5>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+			            <div class="card-image">
+			            	<img src="{!! URL::asset('img/donor/pup.png') !!}" style="height: 170px;">
+			            </div>
+		              	<div class="card-stacked">
+		                	<div class="card-content">
+		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                	</div>
+		                	<div class="card-action">
+		                  		<a href="#">View more</a>
+		                	</div>
+		              	</div>
 		            </div>
-		            <div class="card-content hvr-underline-reveal">
-		              <p class="white-text">We provide food, clothes, pillow and other necessary things needed by Flood victims</p>
+	          	</div>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+			            <div class="card-image">
+			            	<img src="{!! URL::asset('img/donor/dost.png') !!}" style="height: 170px;">
+			            </div>
+		              	<div class="card-stacked">
+		                	<div class="card-content">
+		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                	</div>
+		                	<div class="card-action">
+		                  		<a href="#">View more</a>
+		                	</div>
+		              	</div>
 		            </div>
-		            <div class="card-action">
-		              <a href="#" class="white-text">Learn More<i class="fa fa-arrow-circle-right left"></i></a>
-		            </div>
-		          </div>
-		        </div>
-      		</div>
-      	</div>
+	          	</div>
+	        </div>
+	       	<!-- HOTLINES -->
+	    </div>
     </div>
 
 @endsection
 
 @section('scripts')
 	<script type="text/javascript" src = "{!! URL::asset('../js/process/homeEvent.js') !!}"></script>
-
     <script type="text/javascript">
       $(document).ready(function() {
       $('.dropdown-button').dropdown({

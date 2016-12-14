@@ -38,10 +38,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <div>
-      @yield('userNav')
-    </div>
-
     <div class="col s12 m8 l12">
       <!-- Dropdown Structure -->
       <nav class="green lighten-1">
@@ -60,13 +56,13 @@
               </ul>
             </li>
             </li>
-            <li><a id = 'btnLogout'>Logout<i class="fa fa-sign-out left"></i></a></li>
+            <li><a id = 'btnLogin'>Login<i class="fa fa-sign-in left"></i></a></li>
+            <li><a href="" class="btn">Sign Up</a></li>
           </ul>
           </div>
         </div>
       </nav>
     </div>
-
 
     <div>
       @yield('body')
