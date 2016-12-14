@@ -5,11 +5,10 @@
 @endsection
 
 @section('body')
-	<div class="parallax-container">
-		<div class="parralax">
-			<img src="{!! URL::asset('../img/header.png') !!}">
-		</div>
-	</div>
+
+  <div class="parralax-container center green lighten-2">
+    <div class="parralax"><img src="{!! URL::asset('../img/index/head.png') !!}"></div>
+  </div>
 
 	<div class="container">
     	<div class="col s12 m8 l9">
@@ -47,7 +46,7 @@
                     <img src="{!! URL::asset('../img/index/actfinal.png') !!}" style="background-position: center;">
                     <figcaption class="white-text">
                       <h2><span>Act</span></h2>
-                      <p>Help and Donate</p>
+                      <p>Share to others</p>
                     </figcaption>     
                   </figure>
                 </div>
@@ -56,7 +55,7 @@
                     <img src="{!! URL::asset('../img/index/awarefinal.png') !!}" style="background-position: center;">
                     <figcaption class="white-text">
                       <h2><span>Aware</span></h2>
-                      <p>Help and Donate</p>
+                      <p>Be aware to your surroundings</p>
                     </figcaption>     
                   </figure>
                 </div>
@@ -64,8 +63,9 @@
     	</div>
     </div>
 
-    <div class="row">
+    <div class="row red lighten-2">
     	<div class="col l4">
+        <h5 class="white-text center">Recent Event</h5>
     		<div class="col s12">
     			<div class="card">
 	              	<div class="card-image">

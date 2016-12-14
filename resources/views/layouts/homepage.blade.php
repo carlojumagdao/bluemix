@@ -43,7 +43,7 @@
       <nav class="green lighten-1">
         <div class="nav-wrapper">
           <div class="col s12">
-          <a href="index.php" class="brand-logo">Logo</a>
+          <a href="index.php" class="brand-logo">P A L A D<img src="{!! URL::asset('../img/index/paladlogo.png') !!}" class="circle left" style="height: 60px;"></a>
           <ul class="right hide-on-med-and-down green">
             <li><a href="http://demo.geekslabs.com/materialize/v3.1/sass.html">Home<i class="fa fa-home left"></i></a></li>
             <!-- Dropdown Trigger -->
@@ -64,7 +64,7 @@
       </nav>
     </div>
 
-    <div>
+    <div class="yellow lighten-3">
       @yield('body')
     </div>
 
