@@ -52,7 +52,6 @@
       <nav class="teal">
         <div class="nav-wrapper">
           <div class="col s12">
-          <a href="#!" class="brand-logo">Logo</a>
           <ul class="right hide-on-med-and-down">
             <!-- Dropdown Trigger -->
             <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="fa fa-user-circle-o left"></i>Administrator</a>
@@ -67,7 +66,8 @@
       <nav class="green">
         <div class="nav-wrapper">
           <div class="col s12">
-          <ul class="right hide-on-med-and-down">
+          <a href="index.php" class="brand-logo">P A L A D<img src="{!! URL::asset('../img/index/paladlogo.png') !!}" class="circle left" style="height: 60px;"></a>
+          <ul class="right hide-on-med-and-down green lighten-1">
             <li><a href="sass.html"><i class="fa fa-dashboard left"></i>Dashboard</a>
             </li>
             <li><a href=""><i class="fa fa-plus left"></i>Add Event</a>
