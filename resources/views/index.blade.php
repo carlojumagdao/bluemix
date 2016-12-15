@@ -6,10 +6,6 @@
 
 @section('body')
 
-  <div class="parralax-container center green lighten-2">
-    <div class="parralax"><img src="{!! URL::asset('../img/index/head.png') !!}"></div>
-  </div>
-
 	<div class="container">
     	<div class="col s12 m8 l9">
             <div class="row">
@@ -63,36 +59,195 @@
     	</div>
     </div>
 
-    <div class="row red lighten-2">
-    	<div class="col l4">
-        <h5 class="white-text center">Recent Event</h5>
+    <div class="row">
+      <!-- START OF EVENT -->
+    	<div class="col s12 m4 l6">
+        <h5 class="black-text center">Recent Event</h5>
     		<div class="col s12">
     			<div class="card">
-	              	<div class="card-image">
-		                <img src="img/event/Axe.jpg">
-		                <span class="card-title">Samar, Leyte</span>
-	              	</div>
-	              	<div class="card-content">
-		                <h5 id = 'strEventName'>Yolanda Victim</h5>
-		                <p id = 'strEventDescription'>Estimated 100 families had been affected by the massive storm and taken 5 lives along with 1 million worth of properties</p>
-		                <blockquote id = 'strNote'></blockquote>
-	              	</div>
-	              	<div class="card-content">
-	              		<label>Conditional Fund Progress</label>
-	              			<div id="myProgress" style="position: relative; width: 100%; height: 30px; background-color: #ddd;">
-	              	  			<i class="fa fa-flag prefix right" style="padding-top: 6px; padding-right: 6px;"></i>
+	          <div class="card-image">
+	            <img src="img/event/Axe.jpg">
+	            <span class="card-title">Samar, Leyte</span>
+	         	</div>
+	          <div class="card-content">
+              <h5 id = 'strEventName'>Yolanda Victim</h5>
+              <p id = 'strEventDescription'>Estimated 100 families had been affected by the massive storm and taken 5 lives along with 1 million worth of properties</p>
+              <blockquote id = 'strNote'></blockquote>
+	          </div>
+	          <div class="card-content">
+	            <label>Conditional Fund Progress</label>
+	              <div id="myProgress" style="position: relative; width: 100%; height: 30px; background-color: #ddd;">
+	              	<i class="fa fa-flag prefix right" style="padding-top: 6px; padding-right: 6px;"></i>
 					  			<div id="myBar" style="position: absolute; width: 10%; height: 100%; background-color: #4CAF50;">
 					    			<div id="label" style="text-align: center; line-height: 30px; color: white;">10%</div>
 					  			</div>
-							</div>
-	              	</div>
-	              	<div class="card-action center">
-	                	<a id = 'btnPlay' class="btn white-text"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
-	              	</div>
+							  </div>
+	          </div>
+          	<div class="card-action center">
+            	<a id = 'btnPlay' class="btn white-text"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
+          	</div>
     			</div>
     		</div>
     	</div>
+      <!-- END OF EVENT -->
+      <!-- START SUGGESTED EVENTS -->
+      <div class="col s12 m4 l6">
+        <h5 class="center black-text">Suggested Events</h5>
+        <div class="row ScrollStyle" style="max-height: 550px; overflow-y: scroll;">
+          <div class="col s12">
+            <div class="card horizontal">
+                <div class="card-image">
+                  <img src="img/event/sf.jpg" style="height: 170px;">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information.</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">View more</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col s12">
+            <div class="card horizontal">
+                <div class="card-image">
+                  <img src="img/event/jugg.jpg" style="height: 170px;">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information.</p>
+                  </div>
+                  <div class="card-action">
+                      <a href="#">View more</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col s12">
+            <div class="card horizontal">
+              <div class="card-image">
+                <img src="img/event/sf.jpg" style="height: 170px;">
+              </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information.</p>
+                  </div>
+                  <div class="card-action">
+                      <a href="#">View more</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col s12">
+            <div class="card horizontal">
+              <div class="card-image">
+                <img src="img/event/sf.jpg" style="height: 170px;">
+              </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information.</p>
+                  </div>
+                  <div class="card-action">
+                      <a href="#">View more</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END SUGGESTED EVENTS -->
     </div>
+
+    <!-- HOTLINES -->
+    <div class="row red lighten-1">
+      <h4 class="center white-text" style="padding-top: 15px;">HOTLINES</h4>
+      <div class="col l2">
+        <div class="card">
+          <div class="card-image">
+            <img src="{!! URL::asset('img/donor/pupfinal.png') !!}">
+          </div>
+          <div class="card-content center">
+            <label>PUP</label>
+            <p>094515151</p>
+          </div>
+          <div class="card-action">
+            <a href="">View more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col l2">
+        <div class="card">
+          <div class="card-image">
+            <img src="{!! URL::asset('img/donor/dost.png') !!}">
+          </div>
+          <div class="card-content center">
+            <label>DOST</label>
+            <p>094515151</p>
+          </div>
+          <div class="card-action">
+            <a href="">View more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col l2">
+        <div class="card">
+          <div class="card-image">
+            <img src="{!! URL::asset('img/donor/phivolcsfinal.png') !!}">
+          </div>
+          <div class="card-content center">
+            <label>PHIVOLCS</label>
+            <p>094515151</p>
+          </div>
+          <div class="card-action">
+            <a href="">View more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col l2">
+        <div class="card">
+          <div class="card-image">
+            <img src="{!! URL::asset('img/donor/pnpfinal.png') !!}">
+          </div>
+          <div class="card-content center">
+            <label>PNP</label>
+            <p>094515151</p>
+          </div>
+          <div class="card-action">
+            <a href="">View more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col l2">
+        <div class="card">
+          <div class="card-image">
+            <img src="{!! URL::asset('img/donor/coastfinal.png') !!}">
+          </div>
+          <div class="card-content center">
+            <label>COAST</label>
+            <p>094515151</p>
+          </div>
+          <div class="card-action">
+            <a href="">View more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col l2">
+        <div class="card">
+          <div class="card-image">
+            <img src="{!! URL::asset('img/donor/pupfinal.png') !!}">
+          </div>
+          <div class="card-content center">
+            <label>COAST</label>
+            <p>094515151</p>
+          </div>
+          <div class="card-action">
+            <a href="">View more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF HOTLINES -->
 @endsection
 
 @section('scripts')
