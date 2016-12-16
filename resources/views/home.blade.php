@@ -33,12 +33,14 @@
 			                <span class="card-title" id = 'strLocation'></span>
 		              	</div>
 		              	<div class="card-content">
-			                <h5 id = 'strEventName'></h5>
+			                <h4 id = 'strEventName'></h5>
+			                <p style="font-size:20px;padding-bottom: 5px" id= 'dblConditionalFund'></p>
 			                <p id = 'strEventDescription'></p>
 			                <blockquote id = 'strNote'></blockquote>
+
 		              	</div>
 		              	<div class="card-content">
-		              		<label>Conditional Fund Progress</label>
+		              		<label>Target Donation Progress</label>
 		              			<div id="myProgress" style="position: relative; width: 100%; height: 30px; background-color: #ddd;">
 		              	  			<i class="fa fa-flag prefix right" style="padding-top: 6px; padding-right: 6px;"></i>
 						  			<div id="divBar" style="position: absolute; width: 0%; height: 100%; background-color: #4CAF50;">
