@@ -29,7 +29,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body>
+    <body style="background-image: url(/img/wallpaper2.jpg);">
     
     <div id="login-page" class="row">
         <div class="col s12 m8 l6 push-l3 z-depth-4 card-panel">
@@ -99,7 +99,7 @@
 
               <div class="row">
                   <div class="input-field col s12">
-                    <a class="btn waves-effect waves-light col s12" id = 'btnRegister'>Register Now</a>
+                    <a class="btn waves-effect waves-light col s12 green lighten-1" id = 'btnRegister'>Register Now</a>
                   </div>
                   <div class="input-field col s12">
                     <p class="margin center medium-small sign-up">Already have an account? <a href="/login">Login</a></p>
