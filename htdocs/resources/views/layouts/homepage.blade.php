@@ -38,10 +38,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <div>
-      @yield('userNav')
-    </div>
-
     <div class="col s12 m8 l12">
       <!-- Dropdown Structure -->
       <nav class="green lighten-1">
@@ -60,18 +56,47 @@
               </ul>
             </li>
             </li>
-            <li><a id = 'btnLogout'>Logout<i class="fa fa-sign-out left"></i></a></li>
+            <li><a id = 'btnLogin'>Login<i class="fa fa-sign-in left"></i></a></li>
+            <li><a href="" class="btn red lighten-1">Sign Up</a></li>
           </ul>
           </div>
         </div>
       </nav>
     </div>
 
+    <div class="parralax-container center grey lighten-2">
+      <div class="parralax"><img src="{!! URL::asset('../img/index/indexheader.png') !!}"></div>
+    </div>
 
     <div>
       @yield('body')
     </div>
 
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">PALAD</h5>
+            <p class="grey-text text-lighten-4">When helping is not that expensive.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        Made by INTERNS © 2016 Copyright
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
     @yield('scripts')
     <script type="text/javascript" src = "{!! URL::asset('../js/process/main.js') !!}"></script>
     </body>
