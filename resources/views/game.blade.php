@@ -30,12 +30,12 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body>
+    <body style="background-image: url(/img/wallpaper1.jpg);">
       
 
     <div class="row center">
       <div class="col s12 m8 l4 push-l4">
-        <div class="card">
+        <div class="card z-depth-5">
           <div class="card-image">
             <center><img id="questionImage"></center>
           </div>
@@ -46,9 +46,9 @@
             <input id = 'strAnswer' type="text" placeholder="Enter Your Answer">
             <p id = 'strAnswerStatus'></p>
           </div>
-          <div class="card-action">
-            <button id = 'btnEnter' class = "btn">Enter</button>
-            <button id = 'btnNext' class = "btn">Next</button>
+          <div class="card-action green">
+            <button id = 'btnEnter' class = "btn green lighten-1">Enter</button>
+            <button id = 'btnNext' class = "btn green lighten-1">Next</button>
           </div>
         </div>
       </div>
