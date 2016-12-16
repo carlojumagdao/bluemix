@@ -17,19 +17,26 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $userID = $request->session()->get('userID');
 
-        $userInformation = DB::table('tblUser')
-            ->select('strFirstName', 'strLastName', 'strEmail')
-            ->where('intUserID', $userID)
-            ->first();
+        if ($request->session()->has('userID')){
+            $userID = $request->session()->get('userID');
 
-        $userInformation->dblDonation = DB::table('tblUser')
-            ->join('tblAnswerHeader', 'tblUser.intUserID', '=', 'tblAnswerHeader.intUserID')
-            ->join('tblEvent', 'tblAnswerHeader.intEventID', '=', 'tblEvent.intEventID')
-            ->sum('tblEvent.dblAnswerValue');
+            $userInformation = DB::table('tblUser')
+                ->select('strFirstName', 'strLastName', 'strEmail')
+                ->where('intUserID', $userID)
+                ->first();
 
-        return response()->json($userInformation);
+            $userInformation->dblDonation = DB::table('tblUser')
+                ->join('tblAnswerHeader', 'tblUser.intUserID', '=', 'tblAnswerHeader.intUserID')
+                ->join('tblEvent', 'tblAnswerHeader.intEventID', '=', 'tblEvent.intEventID')
+                ->sum('tblEvent.dblAnswerValue');
+
+            return response()->json($userInformation);
+        }else{
+            return response()->json(false);
+        }
+
+            
     }
 
     /**

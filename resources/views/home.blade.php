@@ -84,10 +84,11 @@
 		              	</div>
 		              	<div class="card-stacked">
 			                <div class="card-content">
-			                  	<p>I am a very simple card. I am good at containing small bits of information.</p>
+			                	<h4 id = 'strSuggestedName'></h4>
+			                  	<p id = 'strSuggestedDescription'></p>
 			                </div>
 			                <div class="card-action green center">
-			                 	<a id = 'btnPlay' class="btn white-text green lighten-1"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
+			                 	<a id = 'btnSuggestedPlay' class="btn white-text green lighten-1"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
 			                </div>
 		              	</div>
 		            </div>

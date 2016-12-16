@@ -15,19 +15,13 @@ $('document').ready(function(){
 		});//ajax
 	});
 
-	$('#btnPlay').click(function(){
+	$('#btnSuggestedPlay').click(function(){
+		id = this.value;
 		$.ajax({
 			type: "GET",
-			url: "/comments?eventID=" + eventID,
+			url: "/seteventid?eventID=" + eventID,
 			success: function(data){
-				$('#commentSection ul').empty();
-				$.each(data, function(index, value){
-					$("#commentSection ul").append('<li class="collection-item avatar">' + 
-		                '<img src="img/avatar/avatar1.png" alt="" class="circle">' + 
-		                '<span>@' + value.strUsername +'</span>' + 
-		                '<p>' + value.strComment + '</p>' + 
-		            	'</li>');
-				});
+				window.location.href = '/game';
 			},
 			error: function(data){
 				var toastContent = $('<span>Error Occured. </span>');
@@ -35,6 +29,8 @@ $('document').ready(function(){
 			}
 		});//ajax
 	});
+
+	
 
 	$('#btnComment').click(function(){
 		var strComment = $('#strComment').val();
@@ -90,6 +86,9 @@ $('document').ready(function(){
 		type: "GET",
 		url: "/users",
 		success: function(data){
+			if (!data){
+				window.location.href = '/login';
+			}
 			$('#strFullName').text(data.strFirstName + ' ' + data.strLastName);
 			$('#strEmail').text(data.strEmail);
 			$('#dblDonation').text('P ' + (data.dblDonation).formatMoney(2, '.', ','));
@@ -116,19 +115,25 @@ $('document').ready(function(){
 		type: "GET",
 		url: "/events",
 		success: function(data){
-			console.log(data);
-			var percent = data.progress + '%';
-			var conditionalfund = (data.dblConditionalFund).formatMoney(2, '.', ',');
-			$('#strEventName').text(data.strEventShortDesc);
+			var latest = data.latest;
+			var suggested = data.suggested;
+
+			var percent = latest.progress + '%';
+			var conditionalfund = (latest.dblConditionalFund).formatMoney(2, '.', ',');
+			$('#strEventName').text(latest.strEventShortDesc);
 			$('#dblConditionalFund').text("Target Donation: P " + conditionalfund);
-			$('#strEventDescription').text(data.strEventLongDesc);
-			$('#strNote').text('For every person who play the game we will donate P' + (data.dblAnswerValue).formatMoney(2, '.', ',') + ' to the victims.');
-			$('#btnComment').val(data.intEventID);		
-			$('#strLocation').text(data.strLocation);	
+			$('#strEventDescription').text(latest.strEventLongDesc);
+			$('#strNote').text('For every person who play the game we will donate P' + (latest.dblAnswerValue).formatMoney(2, '.', ',') + ' to the victims.');
+			$('#btnComment').val(latest.intEventID);		
+			$('#strLocation').text(latest.strLocation);	
 			$('#divBar').css('width', percent);
 			$('#intBar').text(percent);
 
-			eventID = data.intEventID;
+			$('#strSuggestedDescription').text(suggested.strEventLongDesc);
+			$('#strSuggestedName').text(suggested.strEventShortDesc);
+			$('#btnSuggestedPlay').val(suggested.intEventID);
+
+			eventID = latest.intEventID;
 			refreshCommentSection();
 		},
 		error: function(data){

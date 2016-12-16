@@ -17,16 +17,30 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = DB::table('tblEvent')
+        $event = DB::table('tblEvent')
             ->join('tblCategory', 'tblCategory.intCategoryID', '=', 'tblEvent.intCategoryID')
             ->select('tblEvent.*', 'tblCategory.strCategoryName')
             ->orderBy('tblEvent.TIMESTAMP', 'desc')
             ->first();
         $intPersonTake = DB::table('tblEvent')
-            ->where('intEventID', $events->intEventID)
+            ->where('intEventID', $event->intEventID)
             ->count();
 
-        $events->progress = (string) 100 * ($intPersonTake / ($events->dblConditionalFund / $events->dblAnswerValue));
+        $event->progress = (string) 100 * ($intPersonTake / ($event->dblConditionalFund / $event->dblAnswerValue));
+
+        $event1 = DB::table('tblEvent')
+            ->join('tblCategory', 'tblCategory.intCategoryID', '=', 'tblEvent.intCategoryID')
+            ->select('tblEvent.*', 'tblCategory.strCategoryName')
+            ->first();
+        $intPersonTake = DB::table('tblEvent')
+            ->where('intEventID', $event1->intEventID)
+            ->count();
+
+        $event1->progress = (string) 100 * ($intPersonTake / ($event1->dblConditionalFund / $event1->dblAnswerValue));
+
+        $events = new \stdClass();
+        $events->latest = $event;
+        $events->suggested = $event1;
         return response()->json($events);
     }
 
