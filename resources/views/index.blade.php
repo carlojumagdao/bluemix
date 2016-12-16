@@ -66,7 +66,7 @@
     		<div class="col s12">
     			<div class="card">
 	          <div class="card-image">
-	            <img src="img/event/Axe.jpg">
+	            <img src="{!! URL::asset('../img/calamity/calaflood.png') !!}">
 	            <span class="card-title">Samar, Leyte</span>
 	         	</div>
 	          <div class="card-content">
@@ -83,8 +83,8 @@
 					  			</div>
 							  </div>
 	          </div>
-          	<div class="card-action center">
-            	<a id = 'btnPlay' class="btn white-text"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
+          	<div class="card-action center green">
+            	<a id = 'btnPlay' class="btn white-text green lighten-1"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
           	</div>
     			</div>
     		</div>
@@ -97,14 +97,14 @@
           <div class="col s12">
             <div class="card horizontal">
                 <div class="card-image">
-                  <img src="img/event/sf.jpg" style="height: 170px;">
+                  <img src="{!! URL::asset('../img/calamity/calafire.png') !!}" style="height: 170px;">
                 </div>
                 <div class="card-stacked">
                   <div class="card-content">
                       <p>I am a very simple card. I am good at containing small bits of information.</p>
                   </div>
-                  <div class="card-action">
-                    <a href="#">View more</a>
+                  <div class="card-action green center">
+                    <a id = 'btnPlay' class="btn white-text green lighten-1"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
                   </div>
                 </div>
             </div>
@@ -112,44 +112,14 @@
           <div class="col s12">
             <div class="card horizontal">
                 <div class="card-image">
-                  <img src="img/event/jugg.jpg" style="height: 170px;">
+                  <img src="{!! URL::asset('../img/calamity/calanino.png') !!}" style="height: 170px;">
                 </div>
                 <div class="card-stacked">
                   <div class="card-content">
                       <p>I am a very simple card. I am good at containing small bits of information.</p>
                   </div>
-                  <div class="card-action">
-                      <a href="#">View more</a>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="col s12">
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="img/event/sf.jpg" style="height: 170px;">
-              </div>
-                <div class="card-stacked">
-                  <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.</p>
-                  </div>
-                  <div class="card-action">
-                      <a href="#">View more</a>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="col s12">
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="img/event/sf.jpg" style="height: 170px;">
-              </div>
-                <div class="card-stacked">
-                  <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.</p>
-                  </div>
-                  <div class="card-action">
-                      <a href="#">View more</a>
+                  <div class="card-action green center">
+                      <a id = 'btnPlay' class="btn white-text green lighten-1"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
                   </div>
                 </div>
             </div>
@@ -172,7 +142,7 @@
             <p>094515151</p>
           </div>
           <div class="card-action">
-            <a href="">View more</a>
+            <a href="https://www.pup.edu.ph/">View more</a>
           </div>
         </div>
       </div>
@@ -186,7 +156,7 @@
             <p>094515151</p>
           </div>
           <div class="card-action">
-            <a href="">View more</a>
+            <a href="http://www.dost.gov.ph/">View more</a>
           </div>
         </div>
       </div>
@@ -200,7 +170,7 @@
             <p>094515151</p>
           </div>
           <div class="card-action">
-            <a href="">View more</a>
+            <a href="http://www.phivolcs.dost.gov.ph/">View more</a>
           </div>
         </div>
       </div>
@@ -214,7 +184,7 @@
             <p>094515151</p>
           </div>
           <div class="card-action">
-            <a href="">View more</a>
+            <a href="http://www.pnp.gov.ph/">View more</a>
           </div>
         </div>
       </div>
@@ -228,7 +198,7 @@
             <p>094515151</p>
           </div>
           <div class="card-action">
-            <a href="">View more</a>
+            <a href="http://www.coastguard.gov.ph/">View more</a>
           </div>
         </div>
       </div>
@@ -242,7 +212,7 @@
             <p>094515151</p>
           </div>
           <div class="card-action">
-            <a href="">View more</a>
+            <a href="https://www.pup.edu.ph/">View more</a>
           </div>
         </div>
       </div>
