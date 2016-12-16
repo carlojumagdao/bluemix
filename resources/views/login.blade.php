@@ -29,9 +29,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body>
+    <body style="background-image: url(/img/wallpaper2.jpg);">
     
-    <br>
     <br>
     <br>
     <div id="login-page" class="row">
@@ -39,8 +38,8 @@
         <form class="login-form">
           <div class="row">
             <div class="input-field col s12 center">
-              <img src="">
-              <p class="center login-form-text">KEMO</p>
+              <img src="{!! URL::asset('../img/index/paladlogo.png') !!}" class="circle" style="height: 100px;"><br>
+              <p class="center login-form-text">Join our community and help others!</p>
             </div>
           </div>
           <div class="row margin">
@@ -65,7 +64,7 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <a id = 'btnLogin' class="btn waves-effect waves-light col s12">Login</a>
+              <a id = 'btnLogin' class="btn waves-effect waves-light col s12 green lighten-1">Login</a>
             </div>
           </div>
           <div class="row">
@@ -73,7 +72,7 @@
               <p class="margin medium-small"><a href="/registration">Register Now!</a></p>
             </div>
             <div class="input-field col s6 m6 l6">
-                <p class="margin right-align medium-small"><a href="http://demo.geekslabs.com/materialize/v3.1/page-forgot-password.html">Forgot password ?</a></p>
+                <p class="margin right-align medium-small"><a href="">Forgot password ?</a></p>
             </div>          
           </div>
 
