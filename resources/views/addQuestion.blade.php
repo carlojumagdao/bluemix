@@ -35,7 +35,9 @@
         </div>
 		<div class="input-field col s12">
 			<select id = 'selectCategory' name="intCategoryID">
-				<option disabled selected="selected">Choose Group</option>
+				@foreach($categories as $category)
+				<option value="{{$category->intCategoryID}}">{{$category->strCategoryName}}</option>
+				@endforeach
 			</select>
         </div>
         <div class="input-field col s12">
@@ -110,8 +112,9 @@
         }
       );
       });
+      $('select').material_select();
     </script>
     
-	<script type="text/javascript" src = "{!! URL::asset('../js/process/question.js') !!}"></script>
-	<script type="text/javascript" src = "{!! URL::asset('../js/process/selectCategory.js') !!}"></script>
+	<!-- <script type="text/javascript" src = "{!! URL::asset('../js/process/question.js') !!}"></script> -->
+	<!-- <script type="text/javascript" src = "{!! URL::asset('../js/process/selectCategory.js') !!}"></script> -->
 @endsection

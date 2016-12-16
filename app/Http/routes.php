@@ -24,9 +24,9 @@ Route::get('/registration', function () {
     return view('registration');
 });
 
-Route::get('/category', function () {
-    return view('addCategory');
-});
+// Route::get('/category', function () {
+//     return view('addCategory');
+// });
 
 Route::get('/dashboard', function () {
     return view('adminDashboard');
@@ -62,7 +62,7 @@ Route::post('/games/readanswer', 'GameController@readanswer');
 Route::get('/question', 'QuestionController@index');
 Route::get('/logout', 'LoginController@logout');
 Route::get('/comments', 'CommentController@index');
-Route::get('/categories', 'CategoryController@index');
+Route::get('/category', 'CategoryController@index');
 Route::get('/events', 'EventController@index');
 Route::get('/seteventid', 'GameController@setEventID');
 Route::get('/games', 'GameController@index');
