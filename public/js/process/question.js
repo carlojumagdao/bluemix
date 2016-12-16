@@ -4,6 +4,9 @@ $('document').ready(function(){
 		var intCategoryID = $('#selectCategory option:selected').val();
 		var strQuestionDesc = $('#question').val();
 		var strAnswer = $('#answer').val();
+		var strAnswerDesc = $('#answerdesc').val();
+		var strQuestionImage = $('#questionimage').val();
+		strAnswerDesc = encodeURIComponent(strAnswerDesc.trim())
 
 		$.ajax({
 			type: "POST",
@@ -18,7 +21,9 @@ $('document').ready(function(){
 			data: {
 				strQuestionDesc: strQuestionDesc,
 				strAnswer: strAnswer,
-				intCategoryID: intCategoryID
+				intCategoryID: intCategoryID,
+				strAnswerDesc: strAnswerDesc,
+				strQuestionImage: strQuestionImage
 			},
 			success: function(data){
 				confirm('Sucess! Question Created!');

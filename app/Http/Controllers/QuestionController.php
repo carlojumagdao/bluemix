@@ -27,20 +27,40 @@ class QuestionController extends Controller
     public function create(Request $request)
     {
 
+        $destinationPath = 'img/questions'; // upload path
+        $extension = $request->file('pic')->getClientOriginalExtension(); // getting image extension
+        $date = date("Ymdhis");
+        $fileName = $date.'-'.rand(111111,999999).'.'.$extension; // renameing image
+        $request->file('strQuestionImage')->move($destinationPath, $fileName); // uploading file to given path
+        $s3 = AWS::createClient('s3');
+        $s3->putObject(array(
+            'Bucket'     => 'palad',
+            'Key'        => $fileName,
+            'SourceFile' => 'assets/images/uploads/'.$fileName,
+            'ACL'        => 'public-read'
+        ));
+        $file = $destinationPath.'/'.$fileName;
+        unlink($file);
+
         try {
             DB::beginTransaction();
 
             DB::table('tblQuestion')->insert([
                 'strQuestionDesc' => $request->strQuestionDesc,
                 'strAnswer' => $request->strAnswer,
-                'intCategoryID' => $request->intCategoryID
+                'intCategoryID' => $request->intCategoryID,
+                'strAnswerDesc' => $request->strAnswerDesc,
+                'strPicPath' => $fileName
             ]);
-            
             DB::commit();
         } catch (Exception $e) {
             DB::rollback();
         }
-               
+        // this->createaudiofile($fileName);      
+    }
+
+    function createaudiofile(String $strFileName){
+        echo $strFileName;
     }
 
     /**

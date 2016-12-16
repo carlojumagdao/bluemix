@@ -26,6 +26,9 @@ $('document').ready(function(){
 		if (questions[intCounter].strAnswer.toLowerCase() == strAnswer.toLowerCase()){
 			$('#strAnswerStatus').text('Correct!');
 			intScore ++;
+			var data = questions[intCounter].intQuestionID + ".flac";
+			var audio = new Audio(data);
+			audio.play();
 		}else{
 			$('#strAnswerStatus').text('Wrong! The correct answer is ' + questions[intCounter].strAnswer);
 		}
@@ -33,6 +36,30 @@ $('document').ready(function(){
 		intCounter ++;
 		if (intCounter == questions.length){
 			$('#btnNext').text('Submit');
+		}
+		function fncReadAnswerDesc(strAnswerDesc,intQuestionID){
+			$.ajax({
+				type: "POST",
+				url: "games/readanswer",
+				beforeSend: function (xhr) {
+					var token = $('meta[name="csrf_token"]').attr('content');
+
+					if (token) {
+					return xhr.setRequestHeader('X-CSRF-TOKEN', token);
+					}
+				},
+				data: {
+					strAnswerDesc: strAnswerDesc, intQuestionID: intQuestionID
+				},
+				success: function(data){
+					var audio = new Audio(data);
+					audio.play();
+				},
+				error: function(data){
+					var toastContent = $('<span>Error Occured. </span>');
+					Materialize.toast(toastContent, 1500,'red', 'edit');
+				}
+			});//ajax
 		}
 	});
 

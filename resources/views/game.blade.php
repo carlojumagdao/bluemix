@@ -52,7 +52,7 @@
             <img src="{!! URL::asset('../img/10.jpg') !!}">
           </div>
           <div class="card-content">
-            <p id = 'strQuestion' >test12345 question</p>
+            <p id = 'strQuestion' >Question</p>
           </div>
           <div class="card-action">
             <input id = 'strAnswer' type="text" placeholder="Enter Your Answer">

@@ -40,9 +40,24 @@ class GameController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function readanswer(Request $request)
     {
-        //
+        $value = $request->get('strAnswerDesc');
+        $intQuestionID = $request->get('intQuestionID');
+        $username = "2d09577f-cf81-402a-a183-56a120c210ca";
+        $password = "IcY5NgtiM3oL";
+        $url = 'https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize?accept=audio/wav&text='.$value.'.&voice=en-US_AllisonVoice';
+        $fp = fopen($intQuestionID.'.flac', "w");                     
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
+        curl_setopt($ch, CURLOPT_FILE, $fp);
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            echo 'Error:' . curl_error($ch);
+        }
+        curl_close ($ch);
+        return $intQuestionID.".flac";
     }
 
     /**
