@@ -39,7 +39,7 @@
           <div class="row">
             <div class="input-field col s12 center">
               <img src="{!! URL::asset('../img/index/paladlogo.png') !!}" class="circle" style="height: 100px;"><br>
-              <p class="center login-form-text">Join our community and help others!</p>
+              <p class="center login-form-text">Reaching every Juan!</p>
             </div>
           </div>
           <div class="row margin">
