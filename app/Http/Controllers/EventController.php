@@ -21,7 +21,11 @@ class EventController extends Controller
             ->select('tblEvent.*', 'tblCategory.strCategoryName')
             ->orderBy('tblEvent.TIMESTAMP', 'desc')
             ->first();
+        $intPersonTake = DB::table('tblEvent')
+            ->where('intEventID', $events->intEventID)
+            ->count();
 
+        $events->progress = (string) 100 * ($intPersonTake / ($events->dblConditionalFund / $events->dblAnswerValue));
         return response()->json($events);
     }
 

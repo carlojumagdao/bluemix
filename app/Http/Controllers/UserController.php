@@ -15,9 +15,21 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $userID = $request->session()->get('userID');
+
+        $userInformation = DB::table('tblUser')
+            ->select('strFirstName', 'strLastName', 'strEmail')
+            ->where('intUserID', $userID)
+            ->first();
+
+        $userInformation->dblDonation = DB::table('tblUser')
+            ->join('tblAnswerHeader', 'tblUser.intUserID', '=', 'tblAnswerHeader.intUserID')
+            ->join('tblEvent', 'tblAnswerHeader.intEventID', '=', 'tblEvent.intEventID')
+            ->sum('tblEvent.dblAnswerValue');
+
+        return response()->json($userInformation);
     }
 
     /**

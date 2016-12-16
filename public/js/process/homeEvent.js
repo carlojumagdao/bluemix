@@ -88,20 +88,41 @@ $('document').ready(function(){
 
 	$.ajax({
 		type: "GET",
-		url: "/events",
+		url: "/users",
 		success: function(data){
-			console.log(data);
-			$('#strEventName').text(data.strCategoryName + ' - ' + data.strEventShortDesc);
-			$('#strEventDescription').text(data.strEventLongDesc);
-			$('#strNote').text('For every person who play the game we will donate P' + data.dblAnswerValue.toFixed(2) + ' to the victims.');
-			$('#btnComment').val(data.intEventID);			
-			eventID = data.intEventID;
-
-			refreshCommentSection();
+			$('#strFullName').text(data.strFirstName + ' ' + data.strLastName);
+			$('#strEmail').text(data.strEmail);
+			$('#dblDonation').text('PHP ' + data.dblDonation);
+			
 		},
 		error: function(data){
 			var toastContent = $('<span>Error Occured. </span>');
 			Materialize.toast(toastContent, 1500,'red', 'edit');
 		}
 	});//ajax
+
+
+
+	$.ajax({
+		type: "GET",
+		url: "/events",
+		success: function(data){
+			console.log(data);
+			var percent = data.progress + '%';
+			$('#strEventName').text(data.strCategoryName + ' - ' + data.strEventShortDesc);
+			$('#strEventDescription').text(data.strEventLongDesc);
+			$('#strNote').text('For every person who play the game we will donate P' + data.dblAnswerValue.toFixed(2) + ' to the victims.');
+			$('#btnComment').val(data.intEventID);		
+			$('#strLocation').text(data.strLocation);	
+			$('#divBar').css('width', percent);
+			$('#intBar').text(percent);
+
+			eventID = data.intEventID;
+			refreshCommentSection();
+		},
+		error: function(data){
+			var toastContent = $('<span>Error Occured. </span>');
+			Materialize.toast(toastContent, 1500,'red', 'edit');
+		}
+	});//ajax 
 });

@@ -66,6 +66,7 @@ Route::get('/categories', 'CategoryController@index');
 Route::get('/events', 'EventController@index');
 Route::get('/seteventid', 'GameController@setEventID');
 Route::get('/games', 'GameController@index');
+Route::get('/users', 'UserController@index');
 
 
 

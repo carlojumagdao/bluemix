@@ -17,9 +17,9 @@
     			</div>
     		</div>
     		<ul class="collection">
-    			<li class="collection-item green white-text">Rafael Desuyo Jr.<i class="fa fa-user-o prefix left"></i></li>
-    			<li class="collection-item">rafaelofgreece@gmail.com<i class="fa fa-envelope prefix left"></i></li>    			
-    			<li class="collection-item red lighten-1 white-text">60,000 Donations<i class="fa fa-money prefix left"></i></li>
+    			<li class="collection-item green white-text" id = 'strFullName'><i class="fa fa-user-o prefix left"></i></li>
+    			<li class="collection-item" id = 'strEmail'><i class="fa fa-envelope prefix left"></i></li>    			
+    			<li class="collection-item red lighten-1 white-text" id = 'dblDonation'><i class="fa fa-money prefix left"></i></li>
     		</ul>
     	</div>
 
@@ -30,19 +30,19 @@
 		            <div class="card">
 		              	<div class="card-image">
 			                <img src="img/event/Axe.jpg">
-			                <span class="card-title">Samar, Leyte</span>
+			                <span class="card-title" id = 'strLocation'></span>
 		              	</div>
 		              	<div class="card-content">
-			                <h5 id = 'strEventName'>Yolanda Victim</h5>
-			                <p id = 'strEventDescription'>Estimated 100 families had been affected by the massive storm and taken 5 lives along with 1 million worth of properties</p>
+			                <h5 id = 'strEventName'></h5>
+			                <p id = 'strEventDescription'></p>
 			                <blockquote id = 'strNote'></blockquote>
 		              	</div>
 		              	<div class="card-content">
 		              		<label>Conditional Fund Progress</label>
 		              			<div id="myProgress" style="position: relative; width: 100%; height: 30px; background-color: #ddd;">
 		              	  			<i class="fa fa-flag prefix right" style="padding-top: 6px; padding-right: 6px;"></i>
-						  			<div id="myBar" style="position: absolute; width: 10%; height: 100%; background-color: #4CAF50;">
-						    			<div id="label" style="text-align: center; line-height: 30px; color: white;">10%</div>
+						  			<div id="divBar" style="position: absolute; width: 0%; height: 100%; background-color: #4CAF50;">
+						    			<div style="text-align: center; line-height: 30px; color: white;" id = 'intBar'></div>
 						  			</div>
 								</div>
 		              	</div>
