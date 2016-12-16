@@ -26,7 +26,6 @@ $('document').ready(function(){
 		if (questions[intCounter].strAnswer.toLowerCase() == strAnswer.toLowerCase()){
 			$('#strAnswerStatus').text('Correct!');
 			intScore ++;
-			
 		}else{
 			$('#strAnswerStatus').text('Wrong! The correct answer is ' + questions[intCounter].strAnswer);
 		}
