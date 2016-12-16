@@ -59,26 +59,24 @@
 	  	</div>
 		{!! Form::close() !!}
 	</div>
-  	<div class="col s7 m8 l8" style="margin-top:">
-	    <table class="striped white" style="border-radius:10px;" id="dataTable">
-	      <thead>
-	        <tr>
-	        	<th>Picture</th>
-	        	<th>Category Name</th>
-	        	<th>Question</th>
-	        	<th>Answer</th>
-	        </tr>
-	      </thead>
-	      <tbody>
-	        <tr>
-	          <td><img src="{!! URL::asset('img/survival.jpg') !!}" style="height: 50px;"></td>
-	          <td>Survival Kit</td>
-	          <td>What are you?</td>
-	          <td>Human</td>
-	        </tr>
-	      </tbody>
-	    </table>
-  	</div>
+	<div class="col s7 m8 l8" style="margin-top:">
+		<table class="striped white" style="border-radius:10px;" id="dataTable">
+			<thead>
+				<tr>
+					<th>Category Name</th>
+					<th>Question</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach($questions as $question)
+				<tr>
+					<td>{{$question->strCategoryName}}</td>
+					<td>{{$question->strQuestionDesc}}</td>
+				</tr>
+				@endforeach
+			</tbody>
+		</table>
+	</div>
 </div>
 
 @endsection

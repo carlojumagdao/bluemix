@@ -32,18 +32,6 @@
 
     <body>
       
-<!-- PROPOSED DESIGN
-    <div class="col s12 m6 grid">
-      <figure class="effect-marley">
-        <img src="img/10.jpg" alt="img12">
-        <figcaption>
-          <h2>Sweet <span>Marley</span></h2>
-          <p>Marley tried to convince her but she was not interested.</p>
-          <a href="http://demo.geekslabs.com/materialize/v3.1/media-hover-effects.html#">View more</a>
-        </figcaption>     
-      </figure>
-    </div>
-      PROPOSED DESIGN -->
 
     <div class="row center">
       <div class="col s12 m8 l4 push-l4">

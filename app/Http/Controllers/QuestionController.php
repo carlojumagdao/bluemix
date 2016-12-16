@@ -17,7 +17,8 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        //
+        $questions = DB::select('SELECT q.strQuestionDesc, c.strCategoryName FROM tblQuestion AS q INNER JOIN tblCategory AS c ON q.intCategoryID = c.intCategoryID');
+        return view('addQuestion', ['questions' => $questions]);
     }
 
     /**
@@ -26,7 +27,8 @@ class QuestionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request)
-    {
+    {   
+
 
         $destinationPath = 'img/questions'; // upload path
         $extension = $request->file('strQuestionImage')->getClientOriginalExtension(); // getting image extension

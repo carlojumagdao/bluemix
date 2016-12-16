@@ -28,10 +28,6 @@ Route::get('/category', function () {
     return view('addCategory');
 });
 
-Route::get('/question', function () {
-    return view('addQuestion');
-});
-
 Route::get('/dashboard', function () {
     return view('adminDashboard');
 });
@@ -63,6 +59,7 @@ Route::post('/login/check', 'LoginController@check');
 Route::post('/games/readanswer', 'GameController@readanswer');
 
 
+Route::get('/question', 'QuestionController@index');
 Route::get('/logout', 'LoginController@logout');
 Route::get('/comments', 'CommentController@index');
 Route::get('/categories', 'CategoryController@index');
