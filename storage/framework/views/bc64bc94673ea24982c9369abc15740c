@@ -1,0 +1,189 @@
+<?php $__env->startSection('title'); ?>
+	Homepage
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('body'); ?>
+
+	
+
+    <div class="row">
+    	<div class="col s12 m8 l3">
+    		<div class="card">
+    			<div class="card-image">
+    				<img src="<?php echo URL::asset('img/avatar/avatar1.png'); ?>" class="circle center">
+    			</div>
+    		</div>
+    		<ul class="collection">
+    			<li class="collection-item green white-text">Rafael Desuyo Jr.<i class="fa fa-user-o prefix left"></i></li>
+    			<li class="collection-item">rafaelofgreece@gmail.com<i class="fa fa-envelope prefix left"></i></li>    			
+    			<li class="collection-item red lighten-1 white-text">60,000 Donations<i class="fa fa-money prefix left"></i></li>
+    		</ul>
+    	</div>
+
+      	<div class="col s12 m8 l5">
+	        <div class="row">
+    		<h5 class="center">Recent Event</h5>
+	          	<div class="col s12">
+		            <div class="card">
+		              	<div class="card-image">
+			                <img src="img/event/Axe.jpg">
+			                <span class="card-title">Samar, Leyte</span>
+		              	</div>
+		              	<div class="card-content">
+			                <h5 id = 'strEventName'>Yolanda Victim</h5>
+			                <p id = 'strEventDescription'>Estimated 100 families had been affected by the massive storm and taken 5 lives along with 1 million worth of properties</p>
+			                <blockquote id = 'strNote'></blockquote>
+		              	</div>
+		              	<div class="card-content">
+		              		<label>Conditional Fund Progress</label>
+		              			<div id="myProgress" style="position: relative; width: 100%; height: 30px; background-color: #ddd;">
+		              	  			<i class="fa fa-flag prefix right" style="padding-top: 6px; padding-right: 6px;"></i>
+						  			<div id="myBar" style="position: absolute; width: 10%; height: 100%; background-color: #4CAF50;">
+						    			<div id="label" style="text-align: center; line-height: 30px; color: white;">10%</div>
+						  			</div>
+								</div>
+		              	</div>
+		              	<div class="card-action">
+		                	<a id = 'btnPlay' class="btn white-text"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
+		              	</div>
+		              	<div class="card-action row">
+		                	<div class="col s4 card-action-share">
+				               	<a href="">Like</a>                          
+				               	<a href="">Share</a>
+		                	</div>
+		                
+		                	<div class="input-field col s8 margin">
+				              	<input id="strComment" type="text" class="validate margin">
+				            	<label for="strComment" class="">Comments</label>
+
+				            	<a id = 'btnComment' class="btn white-text">Post Comment</a>
+		                	</div>                        
+		              	</div> 
+		            </div>
+		        </div>
+
+	          	<div id = 'commentSection' class="col s12 ScrollStyle" style="max-height: 300px; overflow-y: scroll;">
+	            	<ul class="collection">
+	            	</ul>
+	          	</div>
+        	</div>
+      	</div>
+
+      	<div class="col s12 m6 l4">
+	        <div class="row ScrollStyle" style="max-height: 500px; overflow-y: scroll;">
+	        	<h5 class="center">Suggested Events</h5>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+		              	<div class="card-image">
+		                	<img src="img/event/sf.jpg" style="height: 170px;">
+		              	</div>
+		              	<div class="card-stacked">
+			                <div class="card-content">
+			                  	<p>I am a very simple card. I am good at containing small bits of information.</p>
+			                </div>
+			                <div class="card-action">
+			                 	<a href="#">View more</a>
+			                </div>
+		              	</div>
+		            </div>
+	          	</div>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+		              	<div class="card-image">
+		                	<img src="img/event/jugg.jpg" style="height: 170px;">
+		              	</div>
+		              	<div class="card-stacked">
+			                <div class="card-content">
+			                  	<p>I am a very simple card. I am good at containing small bits of information.</p>
+			                </div>
+			                <div class="card-action">
+			                  	<a href="#">View more</a>
+			                </div>
+		              	</div>
+		            </div>
+	          	</div>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+			            <div class="card-image">
+			            	<img src="img/event/sf.jpg" style="height: 170px;">
+			            </div>
+		              	<div class="card-stacked">
+		                	<div class="card-content">
+		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                	</div>
+		                	<div class="card-action">
+		                  		<a href="#">View more</a>
+		                	</div>
+		              	</div>
+		            </div>
+	          	</div>
+	        </div>
+	        <!-- HOTLINES -->
+	        <div class="row red lighten-1 ScrollStyle" style="max-height: 500px; overflow-y: scroll;">
+	    	<h5 class="center white-text">Hotlines</h5>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+			            <div class="card-image">
+			            	<img src="<?php echo URL::asset('img/donor/pup.png'); ?>" style="height: 170px;">
+			            </div>
+		              	<div class="card-stacked">
+		                	<div class="card-content">
+		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                	</div>
+		                	<div class="card-action">
+		                  		<a href="#">View more</a>
+		                	</div>
+		              	</div>
+		            </div>
+	          	</div>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+			            <div class="card-image">
+			            	<img src="<?php echo URL::asset('img/donor/dost.png'); ?>" style="height: 170px;">
+			            </div>
+		              	<div class="card-stacked">
+		                	<div class="card-content">
+		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                	</div>
+		                	<div class="card-action">
+		                  		<a href="#">View more</a>
+		                	</div>
+		              	</div>
+		            </div>
+	          	</div>
+	        </div>
+	       	<!-- HOTLINES -->
+	    </div>
+    </div>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('scripts'); ?>
+	<script type="text/javascript" src = "<?php echo URL::asset('../js/process/homeEvent.js'); ?>"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $('.dropdown-button').dropdown({
+          inDuration: 300,
+          outDuration: 225,
+          constrain_width: false, // Does not change width of dropdown to that of the activator
+          hover: true, // Activate on hover
+          gutter: 0, // Spacing from edge
+          belowOrigin: true, // Displays dropdown below the button
+          alignment: 'left' // Displays dropdown with edge aligned to the left of button
+        }
+      );
+      });
+    </script>
+    <script type="text/javascript">
+     	$(document).ready(function(){
+      	$('.slider').slider({full_width: true});
+    });
+    </script>
+    <script type="text/javascript">
+     	$(document).ready(function(){
+        $('.slider').slider({height: 300});
+    });
+    </script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
