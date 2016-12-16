@@ -8,6 +8,11 @@
 
 <br>
 <div class="row">
+	@if (Session::has('message'))
+        <div>
+            <blockquote>{{ Session::get('message') }}</blockquote>
+        </div>
+    @endif
 	<div class="col s5 m4 l4">
 		{!! Form::open( array(
             'method' => 'post',
@@ -22,31 +27,35 @@
         <div class="file-field input-field">
             <div class="btn waves-effect waves-black">
                 <span>File</span>
-                <input name = "questionimage" type="file" onchange="readURL(this);">
+                <input name = "strQuestionImage" type="file" onchange="readURL(this);">
             </div>
             <div class="file-path-wrapper">
                 <input class="file-path validate yellow-text text-darken-2" type="text">
             </div>
         </div>
 		<div class="input-field col s12">
-			<select id = 'selectCategory'>
+			<select id = 'selectCategory' name="intCategoryID">
 				<option disabled selected="selected">Choose Group</option>
 			</select>
         </div>
         <div class="input-field col s12">
-		    <textarea id="question" class="materialize-textarea"></textarea>
+		    <textarea id="question" name="strQuestionDesc" class="materialize-textarea"></textarea>
 		   	<label for="question">Type Question</label>
 		</div>
 		<div class="input-field col s12">
-		  	<input id="answer" type="text" class="validate">
+		  	<input id="answer" name="strAnswer" type="text" class="validate">
 		  	<label for="answer">Answer</label>
 		</div>
 		<div class="input-field col s12">
-		    <textarea id="answerdesc" class="materialize-textarea"></textarea>
+		    <textarea id="answerdesc" name="strAnswerDesc" class="materialize-textarea"></textarea>
 		   	<label for="answerdesc">Answer Description</label>
 		</div>
 	  	<div class="col s12 center" style="padding-top: 10px;">
-	  		<a id = 'btnAdd' class="btn"><i class="fa fa-plus left"></i>Add Question</a>
+	  		{!! Form::submit( 'Submit', array(
+                'id' => 'btn-add-setting',
+                'class' => 'btn'
+                )) 
+            !!}
 	  	</div>
 		{!! Form::close() !!}
 	</div>

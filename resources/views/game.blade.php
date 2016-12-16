@@ -49,7 +49,7 @@
       <div class="col s12 m8 l4 push-l4">
         <div class="card">
           <div class="card-image">
-            <img src="{!! URL::asset('../img/10.jpg') !!}">
+            <center><img id="questionImage"></center>
           </div>
           <div class="card-content">
             <p id = 'strQuestion' >Question</p>
