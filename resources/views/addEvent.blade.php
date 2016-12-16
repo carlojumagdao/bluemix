@@ -53,13 +53,17 @@
 		  	<label for="location">Location</label>
 		</div>
 		<div class="input-field col s12">
-		    <input id="fund" name="dblFund" class="materialize-textarea"></input>
+		    <input id="fund" name="dblFund" type="number"></input>
 		   	<label for="fund">Initial Fund</label>
 		</div>
 		<div class="input-field col s12">
-		    <input id="conditionalfund" name="dblConditionalFund" class="materialize-textarea"></input>
+		    <input id="conditionalfund" name="dblConditionalFund" type="number"></input>
 		   	<label for="conditionalfund">Conditional Fund</label>
 		</div>
+		<div class="input-field col s12">
+		    <input id="target" name="intTarget" type="number"></input>
+		   	<label for="target">Target no. of players</label>
+		</div> 
 	  	<div class="col s12 center" style="padding-top: 10px;">
 	  		{!! Form::submit( 'Submit', array(
                 'id' => 'btn-add-setting',
@@ -105,7 +109,6 @@
 	                    $('#eventpic')
 	                    .attr('src', e.target.result)
 	                    .width(400)
-	                    .height(400);
 	                };
 	            reader.readAsDataURL(input.files[0]);
 	        }

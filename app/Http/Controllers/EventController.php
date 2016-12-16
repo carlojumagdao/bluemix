@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use AWS;
+use Redirect;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
@@ -45,6 +46,7 @@ class EventController extends Controller
 
     public function create(Request $request)
     {
+        $dblAnswerValue = $request->dblConditionalFund / $request->intTarget;
         $destinationPath = 'img/events'; // upload path
         $extension = $request->file('strEventImage')->getClientOriginalExtension(); // getting image extension
         $date = date("Ymdhis");
@@ -68,7 +70,7 @@ class EventController extends Controller
                 'strLocation' => $request->strLocation,
                 'dblFund' => $request->dblFund,
                 'dblConditionalFund' => $request->dblConditionalFund,
-                'dblAnswerValue' => $request->dblAnswerValue,
+                'dblAnswerValue' => $dblAnswerValue,
                 'intCategoryID' => $request->intCategoryID,
                 'strPicturePath' => $fileName
             ]);
