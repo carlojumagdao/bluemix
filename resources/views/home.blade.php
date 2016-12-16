@@ -48,8 +48,8 @@
 						  			</div>
 								</div>
 		              	</div>
-		              	<div class="card-action">
-		                	<a id = 'btnPlay' class="btn white-text"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
+		              	<div class="card-action green center">
+		                	<a id = 'btnPlay' class="btn white-text green lighten-1"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
 		              	</div>
 		              	<div class="card-action row">
 		                	<div class="col s4 card-action-share">
@@ -75,49 +75,49 @@
       	</div>
 
       	<div class="col s12 m6 l4">
+      		<h5 class="center">Suggested Events</h5>
 	        <div class="row ScrollStyle" style="max-height: 500px; overflow-y: scroll;">
-	        	<h5 class="center">Suggested Events</h5>
 	          	<div class="col s12">
-		            <div class="card horizontal">
+		            <div class="card">
 		              	<div class="card-image">
-		                	<img src="img/event/sf.jpg" style="height: 170px;">
+		                	<img src="{!! URL::asset('../img/calamity/calafire.png') !!}" style="height: 170px;">
 		              	</div>
 		              	<div class="card-stacked">
 			                <div class="card-content">
 			                  	<p>I am a very simple card. I am good at containing small bits of information.</p>
 			                </div>
-			                <div class="card-action">
-			                 	<a href="#">View more</a>
+			                <div class="card-action green center">
+			                 	<a id = 'btnPlay' class="btn white-text green lighten-1"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
 			                </div>
 		              	</div>
 		            </div>
 	          	</div>
 	          	<div class="col s12">
-		            <div class="card horizontal">
+		            <div class="card">
 		              	<div class="card-image">
-		                	<img src="img/event/jugg.jpg" style="height: 170px;">
+		                	<img src="{!! URL::asset('../img/calamity/calaquake.png') !!}" style="height: 170px;">
 		              	</div>
 		              	<div class="card-stacked">
 			                <div class="card-content">
 			                  	<p>I am a very simple card. I am good at containing small bits of information.</p>
 			                </div>
-			                <div class="card-action">
-			                  	<a href="#">View more</a>
+			                <div class="card-action green center">
+			                  	<a id = 'btnPlay' class="btn white-text green lighten-1"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
 			                </div>
 		              	</div>
 		            </div>
 	          	</div>
 	          	<div class="col s12">
-		            <div class="card horizontal">
+		            <div class="card">
 			            <div class="card-image">
-			            	<img src="img/event/sf.jpg" style="height: 170px;">
+			            	<img src="{!! URL::asset('../img/calamity/calaflood.png') !!}" style="height: 170px;">
 			            </div>
 		              	<div class="card-stacked">
 		                	<div class="card-content">
 		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
 		                	</div>
-		                	<div class="card-action">
-		                  		<a href="#">View more</a>
+		                	<div class="card-action green center">
+		                  		<a id = 'btnPlay' class="btn white-text green lighten-1"><i class="fa fa-gamepad prefix left"></i>Play game to donate</a>
 		                	</div>
 		              	</div>
 		            </div>
@@ -136,7 +136,7 @@
 		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
 		                	</div>
 		                	<div class="card-action">
-		                  		<a href="#">View more</a>
+		                  		<a href="https://www.pup.edu.ph">View more</a>
 		                	</div>
 		              	</div>
 		            </div>
@@ -151,7 +151,52 @@
 		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
 		                	</div>
 		                	<div class="card-action">
-		                  		<a href="#">View more</a>
+		                  		<a href="http://www.dost.gov.ph/">View more</a>
+		                	</div>
+		              	</div>
+		            </div>
+	          	</div>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+			            <div class="card-image">
+			            	<img src="{!! URL::asset('img/donor/phivolcsfinal.png') !!}" style="height: 170px;">
+			            </div>
+		              	<div class="card-stacked">
+		                	<div class="card-content">
+		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                	</div>
+		                	<div class="card-action">
+		                  		<a href="http://www.phivolcs.dost.gov.ph/">View more</a>
+		                	</div>
+		              	</div>
+		            </div>
+	          	</div>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+			            <div class="card-image">
+			            	<img src="{!! URL::asset('img/donor/pnpfinal.png') !!}" style="height: 170px;">
+			            </div>
+		              	<div class="card-stacked">
+		                	<div class="card-content">
+		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                	</div>
+		                	<div class="card-action">
+		                  		<a href="http://www.pnp.gov.ph/">View more</a>
+		                	</div>
+		              	</div>
+		            </div>
+	          	</div>
+	          	<div class="col s12">
+		            <div class="card horizontal">
+			            <div class="card-image">
+			            	<img src="{!! URL::asset('img/donor/coastfinal.png') !!}" style="height: 170px;">
+			            </div>
+		              	<div class="card-stacked">
+		                	<div class="card-content">
+		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                	</div>
+		                	<div class="card-action">
+		                  		<a href="http://www.coastguard.gov.ph/">View more</a>
 		                	</div>
 		              	</div>
 		            </div>
