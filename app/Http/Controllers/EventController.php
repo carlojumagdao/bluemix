@@ -34,26 +34,50 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function home(){
+        $categories = DB::table('tblCategory')
+            ->select('*')
+            ->get();
+        $events = DB::select('SELECT e.strEventShortDesc, e.dblFund,e.dblConditionalFund, c.strCategoryName FROM tblEvent AS e INNER JOIN tblCategory AS c ON e.intCategoryID = c.intCategoryID');
+        return view('addEvent', ['events' => $events, 'categories' => $categories]);
+    }
+
     public function create(Request $request)
     {
+        $destinationPath = 'img/events'; // upload path
+        $extension = $request->file('strEventImage')->getClientOriginalExtension(); // getting image extension
+        $date = date("Ymdhis");
+        $fileName = $date.'-'.rand(111111,999999).'.'.$extension; // renameing image
+        $request->file('strEventImage')->move($destinationPath, $fileName); // uploading file to given path
+        $s3 = AWS::createClient('s3');
+        $s3->putObject(array(
+            'Bucket'     => 'palad',
+            'Key'        => $fileName,
+            'SourceFile' => 'img/events/'.$fileName,
+            'ACL'        => 'public-read'
+        ));
+        $file = $destinationPath.'/'.$fileName;
+        unlink($file);
         try {
             DB::beginTransaction();
 
             DB::table('tblEvent')->insert([
-                'strEventShortDesc' => $request->strEventShortDesc,
-                'strEventLongDesc' => $request->strEventLongDesc,
+                'strEventShortDesc' => $request->strEventName,
+                'strEventLongDesc' => $request->strEventDesc,
                 'strLocation' => $request->strLocation,
                 'dblFund' => $request->dblFund,
                 'dblConditionalFund' => $request->dblConditionalFund,
                 'dblAnswerValue' => $request->dblAnswerValue,
                 'intCategoryID' => $request->intCategoryID,
-                'datExpiration' => $request->datExpiration
+                'strPicturePath' => $fileName
             ]);
-
             DB::commit();
         } catch (Exception $e) {
             DB::rollback();
         }
+        $request->session()->flash('message', 'Question successfully added.');   
+        return Redirect::back();
     }
 
     /**

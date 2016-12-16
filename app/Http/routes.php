@@ -59,6 +59,7 @@ Route::post('/login/check', 'LoginController@check');
 Route::post('/games/readanswer', 'GameController@readanswer');
 
 
+Route::get('/event', 'EventController@home');
 Route::get('/question', 'QuestionController@index');
 Route::get('/logout', 'LoginController@logout');
 Route::get('/comments', 'CommentController@index');

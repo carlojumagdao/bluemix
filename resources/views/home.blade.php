@@ -29,7 +29,7 @@
 	          	<div class="col s12">
 		            <div class="card">
 		              	<div class="card-image">
-			                <img src="img/event/Axe.jpg">
+			                <img src="img/events/phpunit.jpg">
 			                <span class="card-title" id = 'strLocation'></span>
 		              	</div>
 		              	<div class="card-content">
