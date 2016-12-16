@@ -49,14 +49,14 @@
           <div class="col s12">
           <a href="index.php" class="brand-logo">P A L A D<img src="{!! URL::asset('../img/index/paladlogo.png') !!}" class="circle left" style="height: 60px;"></a>
           <ul class="right hide-on-med-and-down green">
-            <li><a href="http://demo.geekslabs.com/materialize/v3.1/sass.html">Home<i class="fa fa-home left"></i></a></li>
+            <li><a href="index.php">Home<i class="fa fa-home left"></i></a></li>
             <!-- Dropdown Trigger -->
             <li style="width: 150px;"><a class="dropdown-button" href="" data-activates="dropdownEvents">Events<i class="fa fa-angle-down left"></i></a>
               <ul id="dropdownEvents" class="dropdown-content">
                 <li style="width: 150px;"><a href="">Earthquake</a></li>
-                <li><a href="">Fire</a></li>
-                <li><a href="">Flood</a></li>
-                <li><a href="">Storm</a></li>
+                <li><a href="home.php">Fire</a></li>
+                <li><a href="home.php">Flood</a></li>
+                <li><a href="home.php">Storm</a></li>
               </ul>
             </li>
             </li>
