@@ -55,6 +55,7 @@ Route::post('/event/create', 'EventController@create');
 Route::post('/comment/create', 'CommentController@create');
 Route::post('/score/create', 'ScoreController@create');
 Route::post('/login/check', 'LoginController@check');
+Route::post('/games/readanswer', 'GameController@readanswer');
 
 
 Route::get('/logout', 'LoginController@logout');

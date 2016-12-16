@@ -10,7 +10,7 @@
       <script type="text/javascript" src="{!! URL::asset('../js/plugin-min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/perfect-scrollbar.min.js') !!}"></script>
       <script type="text/javascript" src="{!! URL::asset('../js/jquery.magnific-popup.min.js') !!}"></script>
-      <script type="text/javascript" src = "{!! URL::asset('../js/process/game.js') !!}"></script>
+      <!-- <script type="text/javascript" src = "{!! URL::asset('../js/process/game.js') !!}"></script> -->
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
@@ -38,7 +38,7 @@
             <img src="{!! URL::asset('../img/10.jpg') !!}">
           </div>
           <div class="card-content">
-            <p id = 'strQuestion' >test12345 question</p>
+            <p id = 'strQuestion' >Question</p>
           </div>
           <div class="card-action">
             <input id = 'strAnswer' type="text" placeholder="Enter Your Answer">
@@ -51,6 +51,118 @@
         </div>
       </div>
     </div>
+
+
+    <script type="text/javascript">
+
+      $('document').ready(function(){
+        var questions;
+        var intCounter = 0;
+        var intScore = 0;
+
+        $.ajax({
+          type: "GET",
+          url: "/games",
+          success: function(data){
+            questions = data;
+            fncQuestion(intCounter);
+          },
+          error: function(data){
+            var toastContent = $('<span>Error Occured. </span>');
+            Materialize.toast(toastContent, 1500,'red', 'edit');
+          }
+        });//ajax
+
+        function fncQuestion(intNumber){
+          var objQuestion = questions[intNumber];
+          $('#strQuestion').text(objQuestion.strQuestionDesc);
+        }
+
+        $('#btnEnter').click(function(){
+          var strAnswer = $('#strAnswer').val();
+          if (questions[intCounter].strAnswer.toLowerCase() == strAnswer.toLowerCase()){
+            $('#strAnswerStatus').text('Correct!');
+            intScore ++;
+            fncReadAnswerDesc(questions[intCounter].strAnswerDesc, questions[intCounter].intQuestionID);
+          }else{
+            $('#strAnswerStatus').text('Wrong! The correct answer is ' + questions[intCounter].strAnswer);
+          }
+
+          intCounter ++;
+          if (intCounter == questions.length){
+            $('#btnNext').text('Submit');
+          }
+          function fncReadAnswerDesc(strAnswerDesc,intQuestionID){
+           $.ajax({
+            type: "POST",
+            url: "games/readanswer",
+            beforeSend: function (xhr) {
+              var token = $('meta[name="csrf_token"]').attr('content');
+
+              if (token) {
+                  return xhr.setRequestHeader('X-CSRF-TOKEN', token);
+              }
+            },
+            data: {
+              strAnswerDesc: strAnswerDesc, intQuestionID: intQuestionID
+            },
+            success: function(data){
+              var audio = new Audio(data);
+              audio.play();
+            },
+            error: function(data){
+              var toastContent = $('<span>Error Occured. </span>');
+              Materialize.toast(toastContent, 1500,'red', 'edit');
+
+            }
+          });//ajax
+        }
+
+        });
+
+        $('#btnNext').click(function(){
+          $('#strAnswerStatus').text('');
+          $('#strAnswer').val('');
+
+          if ($('#btnNext').text() == 'Submit'){
+            submitScore();
+          }
+
+          if(intCounter < questions.length){
+            fncQuestion(intCounter);  
+          }
+        });
+
+
+        
+
+        function submitScore(){
+          $.ajax({
+            type: "POST",
+            url: "score/create",
+            beforeSend: function (xhr) {
+              var token = $('meta[name="csrf_token"]').attr('content');
+
+              if (token) {
+                  return xhr.setRequestHeader('X-CSRF-TOKEN', token);
+              }
+            },
+            data: {
+              intScore: intScore
+            },
+            success: function(data){
+              confirm('Your score is ' + intScore + '. Thank you for participating our campaign.');
+              window.location.href = '/home';
+            },
+            error: function(data){
+              var toastContent = $('<span>Error Occured. </span>');
+              Materialize.toast(toastContent, 1500,'red', 'edit');
+
+            }
+          });//ajax
+        }
+      });
+    </script>
 
 
     </body>
