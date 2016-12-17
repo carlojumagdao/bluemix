@@ -55,7 +55,7 @@ class UserController extends Controller
                 'strUsername' => $request->strUsername,
                 'strPassword' => $request->strPassword,
                 'strEmail' => $request->strEmail,
-                'blSex' => $request->blSex
+                'blSex' => $request->blSex,
             ]);
 
 
@@ -64,7 +64,31 @@ class UserController extends Controller
             DB::rollback();
         }
     }
+    public function facebook(Request $request)
+    {   
+        $userInformation = DB::table('tblUser')
+            ->select('intUserID','strFirstName')
+            ->where('strFacebookID', $request->strFacebookID)
+            ->first();
 
+        if(!is_null($userInformation)){
+            $request->session()->flush();
+            $request->session()->put('userID', $userInformation->intUserID);
+                return response()->json(True);
+        } else{
+            try{
+                DB::beginTransaction();
+                DB::table('tblUser')->insert([
+                    'strFirstname' => $request->strFirstName,
+                    'strLastName' => " ",
+                    'strFacebookID' => $request->strFacebookID,
+                ]);
+                DB::commit();
+            }catch(Exception $e){
+                DB::rollback();
+            }
+        }
+    }
     /**
      * Store a newly created resource in storage.
      *

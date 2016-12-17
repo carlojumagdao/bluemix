@@ -6,9 +6,6 @@
 
 
 @section('body')
-
-	
-
     <div class="row">
     	<div class="col s12 m8 l3">
     		<div class="card">
