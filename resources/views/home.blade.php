@@ -131,7 +131,7 @@
 			            </div>
 		              	<div class="card-stacked">
 		                	<div class="card-content">
-		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                  		<p>Polytechnic University of the Philippines</p>
 		                	</div>
 		                	<div class="card-action">
 		                  		<a href="https://www.pup.edu.ph">View more</a>
@@ -146,7 +146,7 @@
 			            </div>
 		              	<div class="card-stacked">
 		                	<div class="card-content">
-		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                  		<p>Department of Science and Technology</p>
 		                	</div>
 		                	<div class="card-action">
 		                  		<a href="http://www.dost.gov.ph/">View more</a>
@@ -161,7 +161,7 @@
 			            </div>
 		              	<div class="card-stacked">
 		                	<div class="card-content">
-		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                  		<p>Philippine Institute of Volcanology and Seismology</p>
 		                	</div>
 		                	<div class="card-action">
 		                  		<a href="http://www.phivolcs.dost.gov.ph/">View more</a>
@@ -176,7 +176,7 @@
 			            </div>
 		              	<div class="card-stacked">
 		                	<div class="card-content">
-		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                  		<p>=Philippine National Police</p>
 		                	</div>
 		                	<div class="card-action">
 		                  		<a href="http://www.pnp.gov.ph/">View more</a>
@@ -191,7 +191,7 @@
 			            </div>
 		              	<div class="card-stacked">
 		                	<div class="card-content">
-		                  		<p>I am a very simple card. I am good at containing small bits of information.</p>
+		                  		<p>Philippine Coast Guard</p>
 		                	</div>
 		                	<div class="card-action">
 		                  		<a href="http://www.coastguard.gov.ph/">View more</a>

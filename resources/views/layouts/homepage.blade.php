@@ -57,7 +57,7 @@
             </li>
             </li>
             <li><a id = 'btnLogin' href = '/login'>Login<i class="fa fa-sign-in left"></i></a></li>
-            <li><a href="" class="btn red lighten-1">Sign Up</a></li>
+            <li><a href="/registration" class="btn red lighten-1">Sign Up</a></li>
           </ul>
           </div>
         </div>

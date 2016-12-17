@@ -29,6 +29,7 @@ class UserController extends Controller
             $userInformation->dblDonation = DB::table('tblUser')
                 ->join('tblAnswerHeader', 'tblUser.intUserID', '=', 'tblAnswerHeader.intUserID')
                 ->join('tblEvent', 'tblAnswerHeader.intEventID', '=', 'tblEvent.intEventID')
+                ->where('tblUser.intUserID', $userID)
                 ->sum('tblEvent.dblAnswerValue');
 
             return response()->json($userInformation);

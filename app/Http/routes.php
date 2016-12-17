@@ -63,6 +63,7 @@ Route::get('/event', 'EventController@home');
 Route::get('/question', 'QuestionController@index');
 Route::get('/logout', 'LoginController@logout');
 Route::get('/comments', 'CommentController@index');
+Route::get('/categories', 'CategoryController@getCategories');
 Route::get('/category', 'CategoryController@index');
 Route::get('/events', 'EventController@index');
 Route::get('/seteventid', 'GameController@setEventID');

@@ -23,6 +23,14 @@ class CategoryController extends Controller
         return view('addCategory', ['categories' => $categories]);
     }
 
+    public function getCategories(){
+        $categories = DB::table('tblCategory')
+            ->select('*')
+            ->get();
+
+        return response()->json($categories);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
